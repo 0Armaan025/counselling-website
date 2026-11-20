@@ -6,6 +6,7 @@ export type College = {
   formUrl: string;
   fees: string;
   exam: string;
+  courses: string[];
 };
 
 export type Course = {
@@ -20,9 +21,13 @@ export type Stream = {
   name: string;
   tagline: string;
   accent: string;
+  category?: "med" | "non-med" | "commerce";
   courses: Course[];
   colleges: College[];
 };
+
+export const findStreamByCategory = (category: string) =>
+  streams.find((s) => s.category === category);
 
 const JOSAA = "https://josaa.nic.in";
 const CUET = "https://exams.nta.nic.in";
@@ -37,6 +42,7 @@ export const streams: Stream[] = [
     name: "Science (PCM)",
     tagline: "Engineering, technology and the hard sciences",
     accent: "#B34724",
+    category: "non-med",
     courses: [
       { name: "B.Tech / B.E.", duration: "4 years", exam: "JEE Main + JEE Advanced" },
       { name: "B.Sc (Hons)", duration: "3 years", exam: "CUET-UG / merit" },
@@ -44,9 +50,12 @@ export const streams: Stream[] = [
       { name: "B.Math (ISI)", duration: "3 years", exam: "ISI B.Math Entrance" },
     ],
     colleges: [
-      { name: "IIT Bombay", city: "Mumbai", state: "Maharashtra", website: "https://www.iitb.ac.in", formUrl: JOSAA, fees: "≈ ₹2.1L / year", exam: "JEE Advanced" },
-      { name: "IIT Delhi", city: "New Delhi", state: "Delhi", website: "https://www.iitd.ac.in", formUrl: JOSAA, fees: "≈ ₹2.0L / year", exam: "JEE Advanced" },
-      { name: "NIT Trichy", city: "Tiruchirappalli", state: "Tamil Nadu", website: "https://www.nitt.edu", formUrl: JOSAA, fees: "≈ ₹1.5L / year", exam: "JEE Main" },
+      { name: "IIT Bombay", city: "Mumbai", state: "Maharashtra", website: "https://www.iitb.ac.in", formUrl: JOSAA, fees: "≈ ₹2.1L / year", exam: "JEE Advanced", courses: ["B.Tech / B.E."] },
+      { name: "IIT Delhi", city: "New Delhi", state: "Delhi", website: "https://www.iitd.ac.in", formUrl: JOSAA, fees: "≈ ₹2.0L / year", exam: "JEE Advanced", courses: ["B.Tech / B.E."] },
+      { name: "NIT Trichy", city: "Tiruchirappalli", state: "Tamil Nadu", website: "https://www.nitt.edu", formUrl: JOSAA, fees: "≈ ₹1.5L / year", exam: "JEE Main", courses: ["B.Tech / B.E."] },
+      { name: "IIT Madras", city: "Chennai", state: "Tamil Nadu", website: "https://www.iitm.ac.in", formUrl: JOSAA, fees: "≈ ₹2.1L / year", exam: "JEE Advanced", courses: ["B.Tech / B.E."] },
+      { name: "IIT Kanpur", city: "Kanpur", state: "Uttar Pradesh", website: "https://www.iitk.ac.in", formUrl: JOSAA, fees: "≈ ₹2.0L / year", exam: "JEE Advanced", courses: ["B.Tech / B.E."] },
+      { name: "BITS Pilani", city: "Pilani", state: "Rajasthan", website: "https://www.bits-pilani.ac.in", formUrl: "https://www.bitsadmission.com", fees: "≈ ₹4.5L / year", exam: "BITSAT", courses: ["B.Tech / B.E."] },
     ],
   },
   {
@@ -55,6 +64,7 @@ export const streams: Stream[] = [
     name: "Science (PCB)",
     tagline: "Medicine, dentistry and health sciences",
     accent: "#14424A",
+    category: "med",
     courses: [
       { name: "MBBS", duration: "5.5 years", exam: "NEET-UG" },
       { name: "BDS", duration: "5 years", exam: "NEET-UG" },
@@ -63,9 +73,12 @@ export const streams: Stream[] = [
       { name: "BAMS / B.V.Sc", duration: "5.5 years", exam: "NEET-UG" },
     ],
     colleges: [
-      { name: "AIIMS New Delhi", city: "New Delhi", state: "Delhi", website: "https://www.aiims.edu", formUrl: MCC, fees: "≈ ₹6,700 / year", exam: "NEET-UG" },
-      { name: "PGIMER Chandigarh", city: "Chandigarh", state: "Chandigarh", website: "https://www.pgimer.edu.in", formUrl: MCC, fees: "≈ ₹2,000 / year", exam: "NEET-UG" },
-      { name: "CMC Vellore", city: "Vellore", state: "Tamil Nadu", website: "https://www.cmch-vellore.edu", formUrl: "https://www.cmch-vellore.edu", fees: "≈ ₹55,000 / year", exam: "NEET-UG" },
+      { name: "AIIMS New Delhi", city: "New Delhi", state: "Delhi", website: "https://www.aiims.edu", formUrl: MCC, fees: "≈ ₹6,700 / year", exam: "NEET-UG", courses: ["MBBS"] },
+      { name: "PGIMER Chandigarh", city: "Chandigarh", state: "Chandigarh", website: "https://www.pgimer.edu.in", formUrl: MCC, fees: "≈ ₹2,000 / year", exam: "NEET-UG", courses: ["MBBS"] },
+      { name: "CMC Vellore", city: "Vellore", state: "Tamil Nadu", website: "https://www.cmch-vellore.edu", formUrl: "https://www.cmch-vellore.edu", fees: "≈ ₹55,000 / year", exam: "NEET-UG", courses: ["MBBS", "BDS"] },
+      { name: "JIPMER Puducherry", city: "Puducherry", state: "Puducherry", website: "https://www.jipmer.edu.in", formUrl: MCC, fees: "≈ ₹12,000 / year", exam: "NEET-UG", courses: ["MBBS"] },
+      { name: "KGMU Lucknow", city: "Lucknow", state: "Uttar Pradesh", website: "https://www.kgmu.org", formUrl: MCC, fees: "≈ ₹40,000 / year", exam: "NEET-UG", courses: ["MBBS", "BDS", "BPT", "B.Sc Nursing"] },
+      { name: "NIMHANS Bangalore", city: "Bengaluru", state: "Karnataka", website: "https://www.nimhans.ac.in", formUrl: "https://www.nimhans.ac.in", fees: "≈ ₹60,000 / year", exam: "NEET-UG", courses: ["MBBS"] },
     ],
   },
   {
@@ -74,6 +87,7 @@ export const streams: Stream[] = [
     name: "Commerce",
     tagline: "Business, finance and accountancy",
     accent: "#C8552E",
+    category: "commerce",
     courses: [
       { name: "B.Com (Hons)", duration: "3 years", exam: "CUET-UG" },
       { name: "BBA", duration: "3 years", exam: "CUET-UG / university entrance" },
@@ -82,9 +96,13 @@ export const streams: Stream[] = [
       { name: "IPM / IPMAT", duration: "5 years", exam: "IPMAT (IIM Indore / Rohtak)" },
     ],
     colleges: [
-      { name: "SRCC, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.srcc.edu", formUrl: DU, fees: "≈ ₹28,000 / year", exam: "CUET-UG" },
-      { name: "Lady Shri Ram College", city: "New Delhi", state: "Delhi", website: "https://lsr.edu.in", formUrl: DU, fees: "≈ ₹30,000 / year", exam: "CUET-UG" },
-      { name: "St. Xavier's College Mumbai", city: "Mumbai", state: "Maharashtra", website: "https://www.xaviers.edu", formUrl: "https://www.xaviers.edu", fees: "≈ ₹60,000 / year", exam: "College merit" },
+      { name: "SRCC, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.srcc.edu", formUrl: DU, fees: "≈ ₹28,000 / year", exam: "CUET-UG", courses: ["B.Com (Hons)", "BA (Hons) Economics"] },
+      { name: "Lady Shri Ram College", city: "New Delhi", state: "Delhi", website: "https://lsr.edu.in", formUrl: DU, fees: "≈ ₹30,000 / year", exam: "CUET-UG", courses: ["B.Com (Hons)", "BA (Hons) Economics"] },
+      { name: "St. Xavier's College Mumbai", city: "Mumbai", state: "Maharashtra", website: "https://www.xaviers.edu", formUrl: "https://www.xaviers.edu", fees: "≈ ₹60,000 / year", exam: "College merit", courses: ["B.Com (Hons)", "BBA", "BCA", "BA (Hons) Economics"] },
+      { name: "Hindu College, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.hinducollege.ac.in", formUrl: DU, fees: "≈ ₹25,000 / year", exam: "CUET-UG", courses: ["B.Com (Hons)", "BA (Hons) Economics"] },
+      { name: "Hansraj College, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.hansrajcollege.ac.in", formUrl: DU, fees: "≈ ₹25,000 / year", exam: "CUET-UG", courses: ["B.Com (Hons)", "BA (Hons) Economics"] },
+      { name: "Christ University", city: "Bengaluru", state: "Karnataka", website: "https://www.christuniversity.in", formUrl: "https://www.christuniversity.in", fees: "≈ ₹3.5L / year", exam: "CUET-UG / university test", courses: ["BBA", "BCA", "BA (Hons) Economics"] },
+      { name: "NMIMS Mumbai", city: "Mumbai", state: "Maharashtra", website: "https://www.nmims.edu", formUrl: "https://www.nmims.edu", fees: "≈ ₹4L / year", exam: "NPAT", courses: ["BBA", "B.Com (Hons)"] },
     ],
   },
   {
@@ -100,9 +118,9 @@ export const streams: Stream[] = [
       { name: "BFA — Fine Arts", duration: "4 years", exam: "University entrance" },
     ],
     colleges: [
-      { name: "St. Stephen's College", city: "New Delhi", state: "Delhi", website: "https://www.ststephens.edu", formUrl: DU, fees: "≈ ₹40,000 / year", exam: "CUET-UG" },
-      { name: "Miranda House, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.mirandahouse.ac.in", formUrl: DU, fees: "≈ ₹18,000 / year", exam: "CUET-UG" },
-      { name: "Hansraj College, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.hansrajcollege.ac.in", formUrl: DU, fees: "≈ ₹18,000 / year", exam: "CUET-UG" },
+      { name: "St. Stephen's College", city: "New Delhi", state: "Delhi", website: "https://www.ststephens.edu", formUrl: DU, fees: "≈ ₹40,000 / year", exam: "CUET-UG", courses: ["BA (Hons) — Psychology, English, Political Science", "BJMC — Journalism & Mass Communication"] },
+      { name: "Miranda House, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.mirandahouse.ac.in", formUrl: DU, fees: "≈ ₹18,000 / year", exam: "CUET-UG", courses: ["BA (Hons) — Psychology, English, Political Science"] },
+      { name: "Hansraj College, University of Delhi", city: "New Delhi", state: "Delhi", website: "https://www.hansrajcollege.ac.in", formUrl: DU, fees: "≈ ₹18,000 / year", exam: "CUET-UG", courses: ["BA (Hons) — Psychology, English, Political Science"] },
     ],
   },
   {
@@ -117,9 +135,9 @@ export const streams: Stream[] = [
       { name: "BFA — Fine Arts", duration: "4 years", exam: "University entrance" },
     ],
     colleges: [
-      { name: "National Institute of Design", city: "Ahmedabad", state: "Gujarat", website: "https://www.nid.edu", formUrl: "https://www.nid.edu", fees: "≈ ₹11L / year", exam: "NID-DAT" },
-      { name: "National Institute of Fashion Technology", city: "New Delhi", state: "Delhi", website: "https://www.nift.ac.in", formUrl: "https://www.nift.ac.in", fees: "≈ ₹2.7L / year", exam: "NIFT Entrance" },
-      { name: "MIT Institute of Design", city: "Pune", state: "Maharashtra", website: "https://www.mitid.edu.in", formUrl: "https://www.mitid.edu.in", fees: "≈ ₹9L / year", exam: "UCEED / SEED" },
+      { name: "National Institute of Design", city: "Ahmedabad", state: "Gujarat", website: "https://www.nid.edu", formUrl: "https://www.nid.edu", fees: "≈ ₹11L / year", exam: "NID-DAT", courses: ["B.Des"] },
+      { name: "National Institute of Fashion Technology", city: "New Delhi", state: "Delhi", website: "https://www.nift.ac.in", formUrl: "https://www.nift.ac.in", fees: "≈ ₹2.7L / year", exam: "NIFT Entrance", courses: ["B.Des", "B.Des Interior Design"] },
+      { name: "MIT Institute of Design", city: "Pune", state: "Maharashtra", website: "https://www.mitid.edu.in", formUrl: "https://www.mitid.edu.in", fees: "≈ ₹9L / year", exam: "UCEED / SEED", courses: ["B.Des Interior Design", "B.Des"] },
     ],
   },
   {
@@ -134,9 +152,9 @@ export const streams: Stream[] = [
       { name: "LLB (after graduation)", duration: "3 years", exam: "CLAT-PG / university entrance" },
     ],
     colleges: [
-      { name: "NLSIU Bangalore", city: "Bengaluru", state: "Karnataka", website: "https://www.nls.ac.in", formUrl: CLAT, fees: "≈ ₹3.0L / year", exam: "CLAT" },
-      { name: "NALSAR Hyderabad", city: "Hyderabad", state: "Telangana", website: "https://www.nalsar.ac.in", formUrl: CLAT, fees: "≈ ₹2.3L / year", exam: "CLAT" },
-      { name: "WBNUJS Kolkata", city: "Kolkata", state: "West Bengal", website: "https://www.nujs.edu", formUrl: CLAT, fees: "≈ ₹2.4L / year", exam: "CLAT" },
+      { name: "NLSIU Bangalore", city: "Bengaluru", state: "Karnataka", website: "https://www.nls.ac.in", formUrl: CLAT, fees: "≈ ₹3.0L / year", exam: "CLAT", courses: ["BA LLB (Hons)"] },
+      { name: "NALSAR Hyderabad", city: "Hyderabad", state: "Telangana", website: "https://www.nalsar.ac.in", formUrl: CLAT, fees: "≈ ₹2.3L / year", exam: "CLAT", courses: ["BA LLB (Hons)", "BBA LLB / B.Com LLB"] },
+      { name: "WBNUJS Kolkata", city: "Kolkata", state: "West Bengal", website: "https://www.nujs.edu", formUrl: CLAT, fees: "≈ ₹2.4L / year", exam: "CLAT", courses: ["BA LLB (Hons)"] },
     ],
   },
   {
@@ -151,9 +169,9 @@ export const streams: Stream[] = [
       { name: "Event Management (BBA / B.Voc)", duration: "3 years", exam: "Institute entrance" },
     ],
     colleges: [
-      { name: "IHM Pusa", city: "New Delhi", state: "Delhi", website: "https://www.ihmpusa.net", formUrl: "https://www.ihmpusa.net", fees: "≈ ₹1.6L / year", exam: "NCHMCT JEE" },
-      { name: "IIHM Hyderabad", city: "Hyderabad", state: "Telangana", website: "https://www.iihm.ac.in", formUrl: "https://www.iihm.ac.in", fees: "≈ ₹2.5L / year", exam: "IIHM Entrance" },
-      { name: "WGSHA, Manipal", city: "Manipal", state: "Karnataka", website: "https://manipal.edu", formUrl: "https://manipal.edu", fees: "≈ ₹4.5L / year", exam: "MAHE Entrance" },
+      { name: "IHM Pusa", city: "New Delhi", state: "Delhi", website: "https://www.ihmpusa.net", formUrl: "https://www.ihmpusa.net", fees: "≈ ₹1.6L / year", exam: "NCHMCT JEE", courses: ["B.Sc Hospitality & Hotel Administration"] },
+      { name: "IIHM Hyderabad", city: "Hyderabad", state: "Telangana", website: "https://www.iihm.ac.in", formUrl: "https://www.iihm.ac.in", fees: "≈ ₹2.5L / year", exam: "IIHM Entrance", courses: ["B.Sc Hospitality & Hotel Administration", "Event Management (BBA / B.Voc)"] },
+      { name: "WGSHA, Manipal", city: "Manipal", state: "Karnataka", website: "https://manipal.edu", formUrl: "https://manipal.edu", fees: "≈ ₹4.5L / year", exam: "MAHE Entrance", courses: ["B.Sc Hospitality & Hotel Administration", "B.Sc — Culinary Arts"] },
     ],
   },
   {
@@ -167,9 +185,9 @@ export const streams: Stream[] = [
       { name: "B.Plan", duration: "4 years", exam: "JEE Main (Paper 2B)" },
     ],
     colleges: [
-      { name: "School of Planning and Architecture", city: "New Delhi", state: "Delhi", website: "https://www.spa.ac.in", formUrl: "https://www.nata.in", fees: "≈ ₹60,000 / year", exam: "JEE Main (Paper 2)" },
-      { name: "CEPT University", city: "Ahmedabad", state: "Gujarat", website: "https://www.cept.ac.in", formUrl: "https://www.nata.in", fees: "≈ ₹3.5L / year", exam: "NATA / JEE Main" },
-      { name: "SPA Bhopal", city: "Bhopal", state: "Madhya Pradesh", website: "https://www.spabhopal.ac.in", formUrl: "https://www.nata.in", fees: "≈ ₹55,000 / year", exam: "JEE Main (Paper 2)" },
+      { name: "School of Planning and Architecture", city: "New Delhi", state: "Delhi", website: "https://www.spa.ac.in", formUrl: "https://www.nata.in", fees: "≈ ₹60,000 / year", exam: "JEE Main (Paper 2)", courses: ["B.Arch", "B.Plan"] },
+      { name: "CEPT University", city: "Ahmedabad", state: "Gujarat", website: "https://www.cept.ac.in", formUrl: "https://www.nata.in", fees: "≈ ₹3.5L / year", exam: "NATA / JEE Main", courses: ["B.Arch", "B.Plan"] },
+      { name: "SPA Bhopal", city: "Bhopal", state: "Madhya Pradesh", website: "https://www.spabhopal.ac.in", formUrl: "https://www.nata.in", fees: "≈ ₹55,000 / year", exam: "JEE Main (Paper 2)", courses: ["B.Arch", "B.Plan"] },
     ],
   },
 ];

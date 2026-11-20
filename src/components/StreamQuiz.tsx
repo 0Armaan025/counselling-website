@@ -1,6 +1,6 @@
 "use client";
 
-import { Target, GraduationCap, Lightbulb, Check, ArrowRight } from "lucide-react";
+import { Target, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { streams } from "@/data/streams";
 
@@ -101,43 +101,36 @@ export default function StreamQuiz() {
   if (result) {
     const stream = streams.find((s) => s.id === result);
     return (
-      <section className="border-t hairline mt-12 py-12">
-        <div className="mx-auto max-w-2xl px-4">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-clay-600 text-paper-50">
-              <Target size={16} strokeWidth={2} aria-hidden />
-            </div>
+      <section className="section" aria-labelledby="quiz-heading">
+        <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 md:py-16">
+          <div className="section-head">
+            <span className="section-icon" aria-hidden>
+              <Target size={16} strokeWidth={2} />
+            </span>
             <div>
-              <p className="eyebrow flex items-center gap-1">
-                <Lightbulb size={12} aria-hidden /> Stream Recommender
-              </p>
-              <h3 className="font-display text-xl font-semibold text-ink-900 dark:text-paper-50">
+              <p className="eyebrow">Stream Recommender</p>
+              <h3 id="quiz-heading" className="section-title !text-2xl sm:!text-3xl">
                 Based on your answers
               </h3>
             </div>
           </div>
 
-          <div className="border border-ink-100 rounded-lg p-6 dark:border-white/10 dark:bg-black/5 text-center">
-            <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300 mb-2">
-              Your recommended stream
-            </p>
-            <h2 className="font-display text-3xl font-semibold text-ink-900 dark:text-paper-50 mb-2">
+          <div className="card p-6 sm:p-8">
+            <p className="label">Your recommended stream</p>
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl dark:text-paper-50">
               {stream?.name}
             </h2>
-            <p className="text-sm leading-relaxed text-ink-700 dark:text-paper-300 mb-6">
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-700 dark:text-paper-300">
               {STREAM_DESCRIPTIONS[result]}
             </p>
-            <a
-              href="#streams"
-              className="inline-flex items-center gap-2 border border-ink-900 px-4 py-2 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 dark:border-paper-100 dark:text-paper-100 dark:hover:bg-paper-100 dark:hover:text-ink-900"
-            >
+            <a href="#streams" className="btn-ghost mt-6 !px-4 !py-2.5 !text-xs">
               Explore {stream?.name} <ArrowRight size={12} strokeWidth={2} aria-hidden />
             </a>
           </div>
 
           <button
             onClick={reset}
-            className="mt-6 text-[10px] uppercase tracking-[0.14em] text-ink-500 underline underline-offset-2 hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
+            className="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 underline underline-offset-2 transition-colors hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
           >
             Retake quiz
           </button>
@@ -147,24 +140,25 @@ export default function StreamQuiz() {
   }
 
   return (
-    <section className="border-t hairline mt-12 py-12">
-      <div className="mx-auto max-w-2xl px-4">
-        <div className="flex items-center gap-2 mb-6">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-clay-600 text-paper-50">
-            <Target size={16} strokeWidth={2} aria-hidden />
-          </div>
+    <section className="section" aria-labelledby="quiz-heading">
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 md:py-16">
+        <div className="section-head">
+          <span className="section-icon" aria-hidden>
+            <Target size={16} strokeWidth={2} />
+          </span>
           <div>
-            <p className="eyebrow flex items-center gap-1">
-              <Lightbulb size={12} aria-hidden /> Stream Recommender
-            </p>
-            <h3 className="font-display text-xl font-semibold text-ink-900 dark:text-paper-50">
+            <p className="eyebrow">Stream Recommender</p>
+            <h3 id="quiz-heading" className="section-title !text-2xl sm:!text-3xl">
               Find the right stream for you
             </h3>
           </div>
         </div>
 
-        <p className="text-sm text-ink-500 dark:text-paper-300 mb-8">
-          {step + 1} of {QUESTIONS.length} — {current.text}
+        <p className="-mt-4 mb-2 font-mono text-[11px] uppercase tracking-[0.18em] text-clay-600 dark:text-clay-500">
+          Question {String(step + 1).padStart(2, "0")} / {String(QUESTIONS.length).padStart(2, "0")}
+        </p>
+        <p className="mb-8 font-display text-xl font-semibold tracking-tight text-ink-900 dark:text-paper-50">
+          {current.text}
         </p>
 
         <div className="space-y-3">
@@ -172,10 +166,10 @@ export default function StreamQuiz() {
             <button
               key={opt.streamId}
               onClick={() => handlePick(opt)}
-              className="flex items-center justify-between border border-ink-200 rounded-lg p-3 text-left hover:border-clay-600 hover:bg-clay-600/5 transition-colors dark:border-white/20 dark:text-paper-50 dark:hover:border-clay-500"
+              className="flex w-full items-center justify-between gap-3 border hairline bg-white p-4 text-left transition-colors hover:border-clay-500 hover:bg-clay-100/50 dark:bg-[#1E1B17] dark:hover:bg-clay-600/10 dark:hover:border-clay-500"
             >
-              <span className="text-sm text-ink-900 dark:text-paper-50">{opt.label}</span>
-              <span className="font-mono text-[10px] text-ink-400 dark:text-paper-400">+{opt.points}</span>
+              <span className="text-sm font-medium text-ink-900 dark:text-paper-50">{opt.label}</span>
+              <span className="shrink-0 font-mono text-[10px] text-ink-500 dark:text-paper-300">+{opt.points}</span>
             </button>
           ))}
         </div>

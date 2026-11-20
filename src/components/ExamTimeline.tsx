@@ -85,49 +85,43 @@ const sorted = [...EXAM_TIMELINE].sort((a, b) => monthSortKey(a.month) - monthSo
 
 export default function ExamTimeline() {
   return (
-    <section className="border-t hairline mt-12 py-12">
-      <div className="mx-auto max-w-3xl px-4">
-        <div className="flex items-center gap-2 mb-6">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-clay-600 text-paper-50">
-            <Calendar size={16} strokeWidth={2} aria-hidden />
-          </div>
+    <section className="section" aria-labelledby="timeline-heading">
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-16">
+        <div className="section-head">
+          <span className="section-icon" aria-hidden>
+            <Calendar size={16} strokeWidth={2} />
+          </span>
           <div>
-            <p className="eyebrow flex items-center gap-1">
-              <Calendar size={12} aria-hidden /> Entrance Exam Timeline
-            </p>
-            <h3 className="font-display text-xl font-semibold text-ink-900 dark:text-paper-50">
-              Key exam windows for 2026–27
+            <p className="eyebrow">Entrance Exam Timeline</p>
+            <h3 id="timeline-heading" className="section-title">
+              Key exam windows for <em className="italic text-clay-600 dark:text-clay-500">2026–27</em>
             </h3>
           </div>
         </div>
 
-        <p className="mb-8 text-sm text-ink-500 dark:text-paper-300">
+        <p className="-mt-4 mb-8 max-w-xl text-sm leading-relaxed text-ink-500 dark:text-paper-300">
           Entrance-exam months are indicative and change every year — confirm on the official
           exam portal before applying.
         </p>
 
-        <ol className="relative space-y-8 pl-8 border-l hairline">
-          {sorted.map((entry, i) => (
-            <li key={entry.exam} className="relative group">
-              <span className="absolute -left-[10px] top-1.5 flex h-3 w-3 shrink-0 items-center justify-center rounded-full border-2 border-ink-900 bg-paper-50 dark:border-paper-100 dark:bg-black/20" />
-              <div className="mb-2">
-                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
-                  {entry.month}
-                </p>
-              </div>
-              <div className="border border-ink-100 rounded-lg p-4 dark:border-white/10 dark:bg-black/5">
+        <ol className="relative space-y-6 border-l hairline pl-8">
+          {sorted.map((entry) => (
+            <li key={entry.exam} className="relative">
+              <span className="absolute -left-[37px] top-[22px] h-2.5 w-2.5 shrink-0 bg-clay-600 dark:bg-clay-500" aria-hidden />
+              <div className="card p-4 sm:p-5">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <h4 className="font-display text-lg font-semibold text-ink-900 dark:text-paper-50">
+                    <p className="label">{entry.month}</p>
+                    <h4 className="mt-1 font-display text-lg font-semibold tracking-tight text-ink-900 dark:text-paper-50">
                       {entry.exam}
                     </h4>
                     <p className="mt-1 text-sm text-ink-700 dark:text-paper-300">
                       For: {entry.streams.join(", ")}
                     </p>
                   </div>
-                  <div className="flex shrink-0 items-center gap-1 text-clay-600 dark:text-clay-500">
-                    <entry.icon size={14} strokeWidth={1.75} aria-hidden />
-                  </div>
+                  <span className="flex shrink-0 items-center text-clay-600 dark:text-clay-500" aria-hidden>
+                    <entry.icon size={15} strokeWidth={1.75} />
+                  </span>
                 </div>
               </div>
             </li>

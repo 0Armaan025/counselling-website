@@ -38,10 +38,12 @@ export default function BookmarkButton({
       onClick={handleClick}
       aria-pressed={bookmarked}
       aria-label={bookmarked ? "Remove bookmark" : "Bookmark college"}
-      className="inline-flex items-center gap-1 text-[9px] uppercase tracking-[0.14em] transition-colors hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
+      className={`inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] transition-colors hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500 ${
+        bookmarked ? "text-clay-600 dark:text-clay-500" : ""
+      }`}
     >
       {bookmarked ? (
-        <BookmarkCheck size={11} strokeWidth={2} aria-hidden fill="clay-600" />
+        <BookmarkCheck size={11} strokeWidth={2} aria-hidden fill="currentColor" />
       ) : (
         <Bookmark size={11} strokeWidth={2} aria-hidden />
       )}

@@ -1,6 +1,6 @@
 "use client";
 
-import { Bot, Send, X, MessageCircle, Volume2 } from "lucide-react";
+import { Bot, Send, Volume2 } from "lucide-react";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { speak } from "@/lib/speech";
 
@@ -82,45 +82,37 @@ export default function AIChat() {
   };
 
   return (
-    <section className="border-t hairline mt-12 py-12">
-      <div className="mx-auto max-w-2xl px-4">
-        <div className="flex items-center gap-2 mb-6">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-clay-600 text-paper-50">
-            <Bot size={16} strokeWidth={2} aria-hidden />
-          </div>
+    <section className="section" aria-labelledby="ai-chat-heading">
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 md:py-16">
+        <div className="section-head">
+          <span className="section-icon" aria-hidden>
+            <Bot size={16} strokeWidth={2} />
+          </span>
           <div>
-            <p className="eyebrow flex items-center gap-1">
-              <MessageCircle size={12} aria-hidden /> AI Career Counsellor
-            </p>
-            <h3 className="font-display text-xl font-semibold text-ink-900 dark:text-paper-50">
+            <p className="eyebrow">AI Career Counsellor</p>
+            <h3 id="ai-chat-heading" className="section-title !text-2xl sm:!text-3xl">
               Ask GuidePath anything
             </h3>
           </div>
         </div>
 
-        <p className="mb-6 text-sm text-ink-500 dark:text-paper-300">
+        <p className="-mt-4 mb-6 text-sm leading-relaxed text-ink-500 dark:text-paper-300">
           Answers come only from our counselling data — no made-up colleges or fees.
         </p>
 
         {/* Chat window */}
-        <div
-          className="flex h-[360px] flex-col border border-ink-100 rounded-lg bg-paper-50 dark:border-white/10 dark:bg-black/20 overflow-hidden"
-        >
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        <div className="card flex h-[380px] flex-col overflow-hidden">
+          <div className="flex-1 space-y-4 overflow-y-auto p-4 sm:p-5">
             {messages.map((m, i) => (
               <div
                 key={i}
-                className={`max-w-[85%] ${
-                  m.role === "user"
-                    ? "ml-auto text-left"
-                    : "mr-auto text-left"
-                }`}
+                className={`max-w-[85%] ${m.role === "user" ? "ml-auto" : "mr-auto"}`}
               >
                 <div
-                  className={`inline-block rounded-lg p-3 text-sm leading-relaxed ${
+                  className={`p-3 text-sm leading-relaxed ${
                     m.role === "user"
-                      ? "bg-ink-900 text-paper-50"
-                      : "bg-paper-100 text-ink-900 dark:bg-white/10 dark:text-paper-50"
+                      ? "bg-ink-900 text-paper-50 dark:bg-paper-50 dark:text-ink-900"
+                      : "border hairline bg-paper-100 text-ink-900 dark:bg-white/5 dark:text-paper-50"
                   }`}
                 >
                   {m.text}
@@ -130,7 +122,7 @@ export default function AIChat() {
                     key="speak"
                     onClick={speakLast}
                     aria-label="Hear this answer"
-                    className="mt-1.5 inline-flex items-center gap-1 text-[9px] uppercase tracking-[0.14em] text-ink-400 hover:text-clay-600 dark:text-paper-400 dark:hover:text-clay-500"
+                    className="mt-1.5 inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-500 transition-colors hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
                   >
                     <Volume2 size={10} aria-hidden /> Hear
                   </button>
@@ -138,20 +130,20 @@ export default function AIChat() {
               </div>
             ))}
             {loading && (
-              <div className="max-w-[85%] mr-auto text-left">
-                <div className="inline-block rounded-lg p-3 bg-paper-100 text-ink-900 dark:bg-white/10 dark:text-paper-50 text-sm animate-pulse">
-                  Typing…
+              <div className="mr-auto max-w-[85%]">
+                <div className="inline-block border hairline bg-paper-100 p-3 font-mono text-xs uppercase tracking-[0.14em] text-ink-500 animate-pulse dark:bg-white/5 dark:text-paper-300">
+                  Counsellor is typing…
                 </div>
               </div>
             )}
             {error && (
-              <div className="max-w-[85%] ml-auto text-left">
-                <div className="inline-block rounded-lg p-3 bg-ink-900/50 border border-red-500/30 text-red-500 text-sm">
+              <div className="ml-auto max-w-[85%]">
+                <div className="inline-block border border-clay-600/40 bg-clay-100 p-3 text-sm text-clay-600 dark:bg-clay-600/10 dark:text-clay-500">
                   {error}
                 </div>
                 <button
                   onClick={() => setError(null)}
-                  className="mt-1 text-[10px] underline underline-offset-2 text-red-500 hover:text-red-600"
+                  className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-clay-600 underline underline-offset-2 hover:text-clay-500 dark:text-clay-500"
                 >
                   Dismiss
                 </button>
@@ -160,10 +152,7 @@ export default function AIChat() {
             <div ref={endRef} />
           </div>
 
-          <form
-            onSubmit={handleSend}
-            className="border-t border-ink-100 bg-paper-50 p-3 dark:border-white/10 dark:bg-black/20"
-          >
+          <form onSubmit={handleSend} className="border-t hairline p-3">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -172,12 +161,12 @@ export default function AIChat() {
                 onKeyDown={handleKeyDown}
                 placeholder="Ask about streams, colleges, exams, fees…"
                 disabled={loading}
-                className="flex-1 min-w-0 bg-transparent border-none placeholder:text-ink-400 dark:placeholder:text-paper-400 text-sm text-ink-900 dark:text-paper-50 focus:ring-0 sm:px-3"
+                className="input min-w-0 flex-1"
               />
               <button
                 type="submit"
                 disabled={loading || !input.trim()}
-                className="flex h-9 w-9 shrink-0 items-center justify-center border border-ink-900 rounded bg-ink-900 text-paper-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors hover:bg-clay-600"
+                className="flex h-10 w-10 shrink-0 items-center justify-center bg-ink-900 text-paper-50 transition-colors hover:bg-clay-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-paper-50 dark:text-ink-900 dark:hover:bg-clay-500 dark:hover:text-paper-50"
                 aria-label="Send message"
               >
                 <Send size={14} strokeWidth={2} aria-hidden />

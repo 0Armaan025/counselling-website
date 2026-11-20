@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, MapPin, Landmark, Filter, Clock, FileText } from "lucide-react";
+import { Search, MapPin, FileText } from "lucide-react";
 import { useState, useMemo } from "react";
 import { streams, type College } from "@/data/streams";
 
@@ -55,42 +55,42 @@ export default function CollegeFilter() {
   const exams = Array.from(new Set(allColleges.map((c) => c.exam))).sort();
 
   return (
-    <section className="border-t hairline mt-12 py-12">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="flex items-center gap-2 mb-6">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-clay-600 text-paper-50">
-            <Search size={16} strokeWidth={2} aria-hidden />
-          </div>
+    <section className="section" aria-labelledby="college-filter-heading">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+        <div className="section-head">
+          <span className="section-icon" aria-hidden>
+            <Search size={16} strokeWidth={2} />
+          </span>
           <div>
-            <p className="eyebrow flex items-center gap-1">
-              <Filter size={12} aria-hidden /> College Search &amp; Filter
-            </p>
-            <h3 className="font-display text-xl font-semibold text-ink-900 dark:text-paper-50">
-              Find colleges by city, exam, or fees
+            <p className="eyebrow">College Search &amp; Filter</p>
+            <h3 id="college-filter-heading" className="section-title">
+              Find colleges by <em className="italic text-clay-600 dark:text-clay-500">city, exam, or fees</em>
             </h3>
           </div>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-4 mb-6">
+        <div className="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-2">
-            <label className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
+            <label htmlFor="cf-query" className="label">
               Search name / city / stream
             </label>
             <input
+              id="cf-query"
               value={filter.query}
               onChange={(e) => setFilter({ ...filter, query: e.target.value })}
               placeholder="e.g. IIT Bombay, Delhi, B.Tech"
-              className="border border-ink-200 rounded bg-paper-100 px-3 py-2 text-[11px] focus:ring-0 dark:border-white/20 dark:bg-black/20 dark:text-paper-50"
+              className="input font-mono text-xs"
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
+            <label htmlFor="cf-city" className="label">
               City
             </label>
             <select
+              id="cf-city"
               value={filter.city}
               onChange={(e) => setFilter({ ...filter, city: e.target.value })}
-              className="border border-ink-200 rounded bg-paper-100 px-3 py-2 text-[11px] focus:ring-0 dark:border-white/20 dark:bg-black/20 dark:text-paper-50"
+              className="input font-mono text-xs"
             >
               <option value="">Any city</option>
               {cities.map((c) => (
@@ -101,13 +101,14 @@ export default function CollegeFilter() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
+            <label htmlFor="cf-state" className="label">
               State
             </label>
             <select
+              id="cf-state"
               value={filter.state}
               onChange={(e) => setFilter({ ...filter, state: e.target.value })}
-              className="border border-ink-200 rounded bg-paper-100 px-3 py-2 text-[11px] focus:ring-0 dark:border-white/20 dark:bg-black/20 dark:text-paper-50"
+              className="input font-mono text-xs"
             >
               <option value="">Any state</option>
               {states.map((s) => (
@@ -118,13 +119,14 @@ export default function CollegeFilter() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
+            <label htmlFor="cf-exam" className="label">
               Entrance exam
             </label>
             <select
+              id="cf-exam"
               value={filter.exam}
               onChange={(e) => setFilter({ ...filter, exam: e.target.value })}
-              className="border border-ink-200 rounded bg-paper-100 px-3 py-2 text-[11px] focus:ring-0 dark:border-white/20 dark:bg-black/20 dark:text-paper-50"
+              className="input font-mono text-xs"
             >
               <option value="">Any exam</option>
               {exams.map((e) => (
@@ -134,36 +136,35 @@ export default function CollegeFilter() {
               ))}
             </select>
           </div>
-        </div>
-
-        <div className="grid gap-4 md:grid-cols-2 mb-6">
           <div className="flex flex-col gap-2">
-            <label className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
+            <label htmlFor="cf-min" className="label">
               Min fees (₹ Lakhs/year)
             </label>
             <input
+              id="cf-min"
               type="number"
               value={filter.minFees}
               onChange={(e) => setFilter({ ...filter, minFees: e.target.value })}
               placeholder="0"
-              className="border border-ink-200 rounded bg-paper-100 px-3 py-2 text-[11px] focus:ring-0 dark:border-white/20 dark:bg-black/20 dark:text-paper-50"
+              className="input font-mono text-xs"
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
+            <label htmlFor="cf-max" className="label">
               Max fees (₹ Lakhs/year)
             </label>
             <input
+              id="cf-max"
               type="number"
               value={filter.maxFees}
               onChange={(e) => setFilter({ ...filter, maxFees: e.target.value })}
               placeholder="50"
-              className="border border-ink-200 rounded bg-paper-100 px-3 py-2 text-[11px] focus:ring-0 dark:border-white/20 dark:bg-black/20 dark:text-paper-50"
+              className="input font-mono text-xs"
             />
           </div>
         </div>
 
-        <div className="flex items-center justify-between mb-4">
+        <div className="mb-4 flex items-center justify-between border-b-2 border-ink-900 pb-3 dark:border-paper-100">
           <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
             {filtered.length} college{s(filtered.length)} found
           </p>
@@ -173,56 +174,49 @@ export default function CollegeFilter() {
                 query: "", city: "", state: "", exam: "", minFees: "", maxFees: "",
               })
             }
-            className="text-[10px] uppercase tracking-[0.14em] text-ink-500 underline underline-offset-2 hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
+            className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 underline underline-offset-2 transition-colors hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
           >
             Clear filters
           </button>
         </div>
 
-        <div className="grid gap-3">
-          {filtered.length === 0 ? (
-            <p className="text-sm text-ink-500 dark:text-paper-300">
-              No colleges match your filters. Try broadening the search.
-            </p>
-          ) : (
-            filtered.map((c) => (
-              <div
+        {filtered.length === 0 ? (
+          <p className="border hairline p-6 text-sm text-ink-500 dark:text-paper-300">
+            No colleges match your filters. Try broadening the search.
+          </p>
+        ) : (
+          <ul className="divide-y hairline border-y hairline">
+            {filtered.map((c) => (
+              <li
                 key={`${c.name}-${c.stream}`}
-                className="border border-ink-100 rounded-lg p-4 dark:border-white/10 dark:bg-black/5"
+                className="flex flex-wrap items-center justify-between gap-3 p-4 transition-colors hover:bg-paper-100/60 dark:hover:bg-white/5"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <a
-                      href={c.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-display text-sm font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline dark:text-paper-50"
-                    >
-                      {c.name}
-                    </a>
-                    <p className="mt-1 flex items-center gap-1.5 text-[11px] text-ink-500 dark:text-paper-300">
-                      <MapPin size={11} aria-hidden /> {c.city}, {c.state}
-                    </p>
-                    <p className="mt-1 flex items-center gap-1.5 text-[11px] text-ink-500 dark:text-paper-300">
-                      <Landmark size={11} aria-hidden /> {c.stream}
-                    </p>
-                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-500 dark:text-paper-300">
-                      {c.exam} · {c.fees}
-                    </p>
-                  </div>
+                <div className="min-w-0">
                   <a
-                    href={c.formUrl}
+                    href={c.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 dark:border-paper-100 dark:text-paper-100 dark:hover:bg-paper-100 dark:hover:text-ink-900"
+                    className="inline-flex items-center gap-1.5 font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline dark:text-paper-50"
                   >
-                    <FileText size={12} strokeWidth={1.75} aria-hidden /> Form
+                    {c.name}
+                    <MapPin size={11} aria-hidden className="shrink-0 text-ink-300 dark:text-paper-300" />
                   </a>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-500 dark:text-paper-300">
+                    {c.city}, {c.state} · {c.stream} · {c.exam} · {c.fees}
+                  </p>
                 </div>
-              </div>
-            ))
-          )}
-        </div>
+                <a
+                  href={c.formUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 dark:border-paper-100 dark:text-paper-100 dark:hover:bg-paper-100 dark:hover:text-ink-900"
+                >
+                  <FileText size={12} strokeWidth={1.75} aria-hidden /> Form
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );
