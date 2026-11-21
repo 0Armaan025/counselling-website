@@ -48,6 +48,15 @@ body {
   .box-heading {
     @apply font-display text-2xl font-bold tracking-tight text-coral-500 dark:text-coral-500;
   }
+  .box-title {
+    @apply font-display text-xl font-bold tracking-tight text-ink-900 dark:text-paper-50;
+  }
+  .box-sub {
+    @apply font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300;
+  }
+  .highlight-line {
+    @apply font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-sun-500 dark:text-sun-400;
+  }
   .box-label {
     @apply font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300;
   }

@@ -34,10 +34,10 @@ export default function StreamCourseCard({
           {course.duration}
         </span>
         <div>
-          <h3 className="box-heading text-ink-900 group-hover:text-clay-600 transition-colors">
+          <h3 className="box-title text-lg text-ink-900 group-hover:text-clay-600 transition-colors">
             {course.name}
           </h3>
-          <p className="box-label mt-1 text-ink-500">
+          <p className="box-sub mt-1 text-ink-500">
             Entrance: {course.exam}
           </p>
         </div>

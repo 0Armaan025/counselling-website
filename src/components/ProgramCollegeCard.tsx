@@ -28,7 +28,7 @@ export default function ProgramCollegeCard({
       <div className="flex items-start gap-2 w-full">
         <span className="box-label text-clay-600">{college.city}, {college.state}</span>
       </div>
-      <h3 className="box-heading text-xl text-ink-900 group-hover:text-clay-600 transition-colors">
+      <h3 className="box-title text-lg text-ink-900 group-hover:text-clay-600 transition-colors">
         {college.name}
       </h3>
       <div className="grid grid-cols-2 gap-3 w-full">

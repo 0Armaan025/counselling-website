@@ -97,6 +97,9 @@ export default function Home() {
         <h1 className="font-display text-4xl font-bold tracking-tight text-ink-900 dark:text-paper-50 mb-12 text-center sm:text-5xl lg:text-6xl">
           What would you like to pursue?
         </h1>
+        <p className="highlight-line text-center mb-12">
+          Paths after Class 12 &bull; click any box to explore degrees &amp; colleges
+        </p>
         <div className="grid gap-6 w-full max-w-7xl px-4">
           {CATEGORIES.map((cat) => {
             const stream = streams.find((s) => s.id === cat.streamId);
@@ -104,23 +107,24 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => enterCategory(cat)}
-                className="group card p-6 rounded-xl shadow-card hover:shadow-lg transition-all cursor-pointer border border-white/30 flex flex-col items-center gap-4 text-center"
+                className="group card p-6 rounded-xl shadow-card hover:shadow-lg transition-all cursor-pointer border border-white/30 flex flex-col items-start gap-4"
               >
-                <span
-                  className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl font-bold text-2xl"
-                  style={{ backgroundColor: cat.accent + "1a", color: cat.accent }}
-                >
-                  {cat.id === "med" && <span aria-hidden>🏥</span>}
-                  {cat.id === "non-med" && <span aria-hidden>⚙️</span>}
-                  {cat.id === "commerce" && <span aria-hidden>📊</span>}
-                  {cat.id === "humanities" && <span aria-hidden>🎨</span>}
-                </span>
-                <span className="font-display text-xl font-bold tracking-tight text-ink-900">
+                <div className="flex items-start gap-2 w-full">
+                  <span className="box-label text-clay-600">{cat.tagline}</span>
+                </div>
+                <span className="box-title text-lg text-ink-900 group-hover:text-clay-600 transition-colors">
                   {cat.name}
                 </span>
-                <span className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-ink-600 leading-none">
-                  {cat.tagline}
-                </span>
+                <div className="grid grid-cols-2 gap-2 w-full pt-1">
+                  <span className="label text-ink-500">Stream</span>
+                  <span className="font-mono text-[11px] font-bold text-ink-900">
+                    {stream?.name}
+                  </span>
+                  <span className="label text-ink-500">Courses</span>
+                  <span className="font-mono text-[11px] font-bold text-ink-900">
+                    {stream?.courses.length}
+                  </span>
+                </div>
                 <span className="highlight-pill">
                   Click to explore <ArrowRight size={12} strokeWidth={2} className="inline ml-1 translate-y-0.5" aria-hidden />
                 </span>
