@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ArrowRight, Bot } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { speak } from "@/lib/speech";
 import { streams } from "@/data/streams";
@@ -36,6 +36,13 @@ const CATEGORIES: Category[] = [
     tagline: "Business, finance and accountancy",
     accent: "#C8552E",
     streamId: "commerce",
+  },
+  {
+    id: "humanities",
+    name: "Humanities",
+    tagline: "Language, society, psychology and media",
+    accent: "#6A1B9A",
+    streamId: "arts-humanities",
   },
 ];
 
@@ -73,12 +80,12 @@ export default function Home() {
           />
         </button>
         {open && (
-          <div className="mt-2 card p-3 w-48 shadow-lg shadow-black/10 animate-slide-down">
+          <div className="mt-2 card p-3 w-48 shadow-lg shadow-white/10 animate-slide-down">
             <Link
               href="/chatbot"
-              className="flex items-center gap-2 p-2 rounded border hairline hover:bg-clay-100 dark:hover:bg-white/5 text-sm font-sans transition-colors"
+              className="flex items-center gap-2 p-2 rounded border border-white/30 hover:bg-white/10 text-sm font-sans transition-colors"
             >
-              <Bot size={14} strokeWidth={2} aria-hidden />
+              <span aria-hidden>🤖</span>
               AI Counsellor
             </Link>
           </div>
@@ -87,43 +94,41 @@ export default function Home() {
 
       <main className="flex-1 flex flex-col items-center justify-center pt-24 pb-16 px-6">
         <p className="eyebrow mb-8 text-center">Choose your path after Class 12</p>
-        <h1 className="font-display text-4xl font-semibold tracking-tight text-ink-900 dark:text-paper-50 mb-12 text-center sm:text-5xl lg:text-6xl">
+        <h1 className="font-display text-4xl font-bold tracking-tight text-white mb-12 text-center sm:text-5xl lg:text-6xl">
           What would you like to pursue?
         </h1>
-        <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full max-w-xs sm:max-w-none">
+        <div className="grid gap-6 w-full max-w-7xl px-4">
           {CATEGORIES.map((cat) => {
             const stream = streams.find((s) => s.id === cat.streamId);
             return (
               <button
                 key={cat.id}
                 onClick={() => enterCategory(cat)}
-                className={`flex flex-col items-center gap-3 w-full sm:w-64 bg-white dark:bg-[#1E1B17] border hairline p-6 rounded-xl text-center transition-all hover:shadow-lg hover:shadow-black/10 group`}
+                className="group card p-6 rounded-xl shadow-lg shadow-white/10 hover:shadow-white/20 transition-all cursor-pointer border border-white/30 flex flex-col items-center gap-3 text-center"
               >
                 <span
-                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full"
-                  style={{
-                    backgroundColor: cat.accent + "20",
-                    color: cat.accent,
-                  }}
+                  className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl font-bold text-2xl"
+                  style={{ backgroundColor: cat.accent + "1a", color: cat.accent }}
                 >
                   {cat.id === "med" && <span aria-hidden>🏥</span>}
                   {cat.id === "non-med" && <span aria-hidden>⚙️</span>}
                   {cat.id === "commerce" && <span aria-hidden>📊</span>}
+                  {cat.id === "humanities" && <span aria-hidden>🎨</span>}
                 </span>
-                <span className="font-display text-xl font-semibold text-ink-900 dark:text-paper-50">
+                <span className="font-display text-xl font-bold tracking-tight text-ink-900">
                   {cat.name}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-ink-600 leading-none">
                   {cat.tagline}
                 </span>
-                <span className="mt-2 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 dark:text-clay-500 group-hover:text-clay-800 dark:group-hover:text-clay-400">
+                <span className="highlight-pill">
                   Click to explore <ArrowRight size={12} strokeWidth={2} className="inline ml-1 translate-y-0.5" aria-hidden />
                 </span>
               </button>
             );
           })}
         </div>
-        <p className="mt-12 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-400 dark:text-paper-400 text-center">
+        <p className="mt-12 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 text-center">
           Click any path to hear it and explore its degrees and top colleges
         </p>
       </main>

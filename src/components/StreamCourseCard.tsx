@@ -27,22 +27,22 @@ export default function StreamCourseCard({
   return (
     <div
       onClick={handleClick}
-      className="group card p-5 hover:shadow-lg hover:shadow-black/10 transition-all cursor-pointer"
+      className="group card p-6 rounded-xl shadow-lg shadow-white/10 hover:shadow-white/20 transition-all cursor-pointer border border-white/30 flex flex-col items-start gap-4"
     >
-      <div className="flex items-start gap-3">
-        <span className="mt-0.5 shrink-0 font-mono text-[11px] uppercase tracking-wider text-clay-600 dark:text-clay-400">
+      <div className="flex items-start gap-3 w-full">
+        <span className="mt-0.5 shrink-0 font-mono text-[11px] font-bold uppercase tracking-wider text-coral-500">
           {course.duration}
         </span>
         <div>
-          <h3 className="font-sans text-lg font-semibold text-ink-900 dark:text-paper-50 group-hover:text-clay-600 dark:group-hover:text-clay-400">
+          <h3 className="box-heading text-ink-900 group-hover:text-clay-600 transition-colors">
             {course.name}
           </h3>
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300 mt-1">
+          <p className="box-label mt-1 text-ink-500">
             Entrance: {course.exam}
           </p>
         </div>
       </div>
-      <span className="mt-3 block font-mono text-[10px] uppercase tracking-[0.2em] text-clay-600 dark:text-clay-400">
+      <span className="highlight-pill">
         Click to explore colleges
       </span>
     </div>

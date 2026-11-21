@@ -21,7 +21,7 @@ export type Stream = {
   name: string;
   tagline: string;
   accent: string;
-  category?: "med" | "non-med" | "commerce";
+  category?: "med" | "non-med" | "commerce" | "humanities";
   courses: Course[];
   colleges: College[];
 };
@@ -230,6 +230,7 @@ export const streams: Stream[] = [
     name: "Arts & Humanities",
     tagline: "Language, society, psychology and media",
     accent: "#14424A",
+    category: "humanities",
     courses: [
       { name: "BA (Hons) — Psychology, English, Political Science", duration: "3 years", exam: "CUET-UG" },
       { name: "BJMC — Journalism & Mass Communication", duration: "3 years", exam: "CUET-UG / university entrance" },
