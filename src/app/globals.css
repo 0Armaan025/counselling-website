@@ -19,52 +19,34 @@ body {
 }
 
 ::selection {
-  background: #ffb800;
+  background: #f5e0d3;
   color: #1b1814;
 }
 .dark ::selection {
-  background: #ffd24a;
-  color: #1b1814;
+  background: #14424a;
+  color: #faf8f3;
 }
 
 :focus-visible {
-  outline: 2px solid #ffb800;
+  outline: 2px solid #c8552e;
   outline-offset: 2px;
 }
 
 @layer components {
   .eyebrow {
-    @apply font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300;
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300;
   }
   .hairline {
     @apply border-paper-200 dark:border-white/10;
   }
   .card {
-    @apply border hairline bg-white text-ink-900 dark:bg-[#1E1B17] dark:text-paper-50;
-  }
-  .highlight-pill {
-    @apply inline-flex items-center gap-2 bg-sun-500 px-4 py-1.5 font-sans text-sm font-bold text-ink-900 dark:bg-sun-400 dark:text-ink-900;
-  }
-  .box-heading {
-    @apply font-display text-2xl font-bold tracking-tight text-coral-500 dark:text-coral-500;
-  }
-  .box-title {
-    @apply font-display text-xl font-bold tracking-tight text-ink-900 dark:text-paper-50;
-  }
-  .box-sub {
-    @apply font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300;
-  }
-  .highlight-line {
-    @apply font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-sun-500 dark:text-sun-400;
-  }
-  .box-label {
-    @apply font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300;
+    @apply border hairline bg-white dark:bg-[#1E1B17];
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-coral-500 px-5 py-3 font-sans text-sm font-bold tracking-wide text-paper-50 transition-colors hover:bg-coral-600 dark:bg-coral-400 dark:text-ink-900 dark:hover:bg-coral-500;
+    @apply inline-flex items-center gap-2 bg-ink-900 px-5 py-3 font-sans text-sm font-semibold tracking-wide text-paper-50 transition-colors hover:bg-clay-600 dark:bg-paper-50 dark:text-ink-900 dark:hover:bg-clay-500 dark:hover:text-paper-50;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 border hairline px-5 py-3 font-sans text-sm font-bold text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-600 dark:text-paper-100 dark:hover:border-clay-500 dark:hover:text-clay-500;
+    @apply inline-flex items-center gap-2 border hairline px-5 py-3 font-sans text-sm font-semibold text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-600 dark:text-paper-100 dark:hover:border-clay-500 dark:hover:text-clay-500;
   }
   .section {
     @apply border-t hairline;
@@ -73,16 +55,16 @@ body {
     @apply mb-8 flex items-start gap-4;
   }
   .section-icon {
-    @apply flex h-9 w-9 shrink-0 items-center justify-center bg-coral-500 text-paper-50 dark:bg-coral-400 dark:text-ink-900;
+    @apply flex h-9 w-9 shrink-0 items-center justify-center bg-ink-900 text-paper-50 dark:bg-paper-50 dark:text-ink-900;
   }
   .section-title {
-    @apply mt-1 font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl dark:text-paper-50;
+    @apply mt-1 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl dark:text-paper-50;
   }
   .label {
-    @apply font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300;
+    @apply font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300;
   }
   .input {
-    @apply w-full border hairline bg-white px-3 py-2.5 font-sans text-sm text-ink-900 placeholder:text-ink-300 transition-colors focus:border-coral-500 dark:bg-[#1E1B17] dark:text-paper-50 dark:placeholder:text-paper-300;
+    @apply w-full border hairline bg-white px-3 py-2.5 font-sans text-sm text-ink-900 placeholder:text-ink-300 transition-colors focus:border-clay-500 dark:bg-[#1E1B17] dark:text-paper-50 dark:placeholder:text-paper-300;
   }
 
   @keyframes slideDown {
