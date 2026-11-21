@@ -27,7 +27,7 @@ export default async function StreamPage({
 
       <main className="flex-1 px-6 py-12 sm:px-8 md:py-16">
         <div className="mx-auto max-w-4xl">
-          <div className="inline-flex items-center gap-2 rounded border border-white/20 px-3 py-1 mb-8 font-mono text-[11px] uppercase tracking-wider text-white/85 border-white/25">
+          <div className="inline-flex items-center gap-2 rounded border hairline px-3 py-1 mb-8 font-mono text-[11px] uppercase tracking-wider text-ink-500 dark:text-paper-300 border-clay-200 dark:border-white/10">
             <span
               style={{
                 backgroundColor: stream.accent + "20",
@@ -37,14 +37,14 @@ export default async function StreamPage({
             />
             {stream.name}
           </div>
-          <h1 className="font-display text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold tracking-tight text-ink-900 dark:text-paper-50 mb-4 sm:text-4xl">
             {stream.name}
           </h1>
-          <p className="text-lg leading-relaxed text-white/90 mb-10">
+          <p className="text-lg leading-relaxed text-ink-700 dark:text-paper-200 mb-10">
             {stream.tagline}
           </p>
 
-          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-white/85 mb-6">
+          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-ink-500 dark:text-paper-300 mb-6">
             Degrees &amp; programs
           </p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

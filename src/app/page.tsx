@@ -80,7 +80,7 @@ export default function Home() {
           />
         </button>
         {open && (
-          <div className="mt-2 card p-3 w-48 shadow-lg shadow-white/10 animate-slide-down">
+          <div className="mt-2 card p-3 w-48 shadow-card animate-slide-down">
             <Link
               href="/chatbot"
               className="flex items-center gap-2 p-2 rounded border border-white/30 hover:bg-white/10 text-sm font-sans transition-colors"
@@ -94,7 +94,7 @@ export default function Home() {
 
       <main className="flex-1 flex flex-col items-center justify-center pt-24 pb-16 px-6">
         <p className="eyebrow mb-8 text-center">Choose your path after Class 12</p>
-        <h1 className="font-display text-4xl font-bold tracking-tight text-white mb-12 text-center sm:text-5xl lg:text-6xl">
+        <h1 className="font-display text-4xl font-bold tracking-tight text-ink-900 dark:text-paper-50 mb-12 text-center sm:text-5xl lg:text-6xl">
           What would you like to pursue?
         </h1>
         <div className="grid gap-6 w-full max-w-7xl px-4">
@@ -104,7 +104,7 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => enterCategory(cat)}
-                className="group card p-6 rounded-xl shadow-lg shadow-white/10 hover:shadow-white/20 transition-all cursor-pointer border border-white/30 flex flex-col items-center gap-3 text-center"
+                className="group card p-6 rounded-xl shadow-card hover:shadow-lg transition-all cursor-pointer border border-white/30 flex flex-col items-center gap-4 text-center"
               >
                 <span
                   className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl font-bold text-2xl"
@@ -128,7 +128,7 @@ export default function Home() {
             );
           })}
         </div>
-        <p className="mt-12 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 text-center">
+        <p className="mt-12 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-ink-400 dark:text-paper-400 text-center">
           Click any path to hear it and explore its degrees and top colleges
         </p>
       </main>

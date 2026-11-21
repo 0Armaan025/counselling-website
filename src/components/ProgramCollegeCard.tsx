@@ -23,7 +23,7 @@ export default function ProgramCollegeCard({
           )}.`,
         )
       }
-      className="group card p-5 rounded-xl shadow-lg shadow-white/10 hover:shadow-white/20 transition-all cursor-pointer border border-white/30 flex flex-col items-start gap-4 block"
+      className="group card p-5 rounded-xl shadow-card hover:shadow-card transition-all cursor-pointer border border-white/30 flex flex-col items-start gap-4 block"
     >
       <div className="flex items-start gap-2 w-full">
         <span className="box-label text-clay-600">{college.city}, {college.state}</span>

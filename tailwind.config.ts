@@ -21,7 +21,7 @@ const config: Config = {
         pine: { 700: "#14424A", 800: "#0E343B", 100: "#DDE8E7" },
         royal: { 600: "#2E42E8", 700: "#2536C9", 800: "#1B2999" },
         sun: { 400: "#FFD24A", 500: "#FFB800", 600: "#F59E0B" },
-        coral: { 500: "#FF6B5E" },
+        coral: { 400: "#FF8A7D", 500: "#FF6B5E" },
       },
       boxShadow: {
         card: "0 1px 0 0 rgba(27,24,20,0.06), 0 8px 24px -12px rgba(27,24,20,0.25)",

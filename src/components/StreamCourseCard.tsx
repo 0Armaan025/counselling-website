@@ -27,7 +27,7 @@ export default function StreamCourseCard({
   return (
     <div
       onClick={handleClick}
-      className="group card p-6 rounded-xl shadow-lg shadow-white/10 hover:shadow-white/20 transition-all cursor-pointer border border-white/30 flex flex-col items-start gap-4"
+      className="group card p-6 rounded-xl shadow-card hover:shadow-card transition-all cursor-pointer border border-white/30 flex flex-col items-start gap-4"
     >
       <div className="flex items-start gap-3 w-full">
         <span className="mt-0.5 shrink-0 font-mono text-[11px] font-bold uppercase tracking-wider text-coral-500">
