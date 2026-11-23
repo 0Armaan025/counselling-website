@@ -1,0 +1,635 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "GuidePath home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e9]: GuidePath
+        - generic [ref=e10]: Post-12th Counselling
+      - navigation "Primary" [ref=e11]:
+        - link "Streams" [ref=e12] [cursor=pointer]:
+          - /url: "#streams"
+        - button "Turn voice guidance off" [pressed] [ref=e13] [cursor=pointer]
+        - button "Toggle dark mode" [ref=e18] [cursor=pointer]
+  - main [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Post-12th counselling — India, 2026–27
+          - heading [level=1] [ref=e26]:
+            - text: Pick the stream.Find the
+            - emphasis [ref=e27]: college
+            - text: .
+          - paragraph [ref=e28]: Science, Commerce, Arts, Design, Law, Hotel Management and Architecture — every stream, the courses under it, the entrance exams, the fees and the official admission form for each leading college. One honest guide, free for students and parents.
+          - generic [ref=e29]:
+            - link "Explore the streams" [ref=e30] [cursor=pointer]:
+              - /url: "#streams"
+            - button "Hear the welcome" [ref=e34] [cursor=pointer]
+          - paragraph [ref=e39]: 08 streams — 29 courses — 24 top colleges — Official forms linked
+        - complementary "How GuidePath works" [ref=e41]:
+          - generic [ref=e42]:
+            - paragraph [ref=e43]: How it works
+            - list [ref=e44]:
+              - listitem [ref=e45]:
+                - generic [ref=e46]: "01"
+                - generic [ref=e47]:
+                  - generic [ref=e48]: Choose your stream
+                  - generic [ref=e55]: Eight routes after Class 12 — from B.Tech to BFA. Open the one that fits.
+              - listitem [ref=e56]:
+                - generic [ref=e57]: "02"
+                - generic [ref=e58]:
+                  - generic [ref=e59]: Compare honestly
+                  - generic [ref=e63]: Course length, entrance exam, fees and the strongest colleges for each path.
+              - listitem [ref=e64]:
+                - generic [ref=e65]: "03"
+                - generic [ref=e66]:
+                  - generic [ref=e67]: Open the official form
+                  - generic [ref=e71]: Every college links straight to its verified admission portal — nothing in between.
+          - paragraph [ref=e72]: Fees & exams re-verified for 2026–27
+      - region [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - paragraph [ref=e80]: The index
+              - heading [level=2] [ref=e83]:
+                - text: Eight streams,
+                - emphasis [ref=e84]: one decision
+                - text: .
+            - paragraph [ref=e85]: Select a stream to hear it
+          - generic [ref=e90]:
+            - group [ref=e91]:
+              - generic "01 Science (PCM) Engineering, technology and the hard sciences Courses in this stream" [ref=e92] [cursor=pointer]:
+                - generic [ref=e93]:
+                  - generic [ref=e94]: "01"
+                  - generic [ref=e95]:
+                    - heading "Science (PCM)" [level=3] [ref=e96]
+                    - paragraph [ref=e97]: Engineering, technology and the hard sciences
+                    - list "Courses in this stream" [ref=e98]:
+                      - listitem [ref=e99]: B.Tech / B.E.
+                      - listitem [ref=e100]: B.Sc (Hons)
+                      - listitem [ref=e101]: Integrated M.Sc (IISER)
+                      - listitem [ref=e102]: B.Math (ISI)
+            - group [ref=e105]:
+              - generic "02 Science (PCB) Medicine, dentistry and health sciences Courses in this stream" [ref=e106] [cursor=pointer]:
+                - generic [ref=e107]:
+                  - generic [ref=e108]: "02"
+                  - generic [ref=e109]:
+                    - heading "Science (PCB)" [level=3] [ref=e110]
+                    - paragraph [ref=e111]: Medicine, dentistry and health sciences
+                    - list "Courses in this stream" [ref=e112]:
+                      - listitem [ref=e113]: MBBS
+                      - listitem [ref=e114]: BDS
+                      - listitem [ref=e115]: BPT
+                      - listitem [ref=e116]: B.Sc Nursing
+                      - listitem [ref=e117]: BAMS / B.V.Sc
+            - group [ref=e120]:
+              - generic "03 Commerce Business, finance and accountancy Courses in this stream" [ref=e121] [cursor=pointer]:
+                - generic [ref=e122]:
+                  - generic [ref=e123]: "03"
+                  - generic [ref=e124]:
+                    - heading "Commerce" [level=3] [ref=e125]
+                    - paragraph [ref=e126]: Business, finance and accountancy
+                    - list "Courses in this stream" [ref=e127]:
+                      - listitem [ref=e128]: B.Com (Hons)
+                      - listitem [ref=e129]: BBA
+                      - listitem [ref=e130]: BCA
+                      - listitem [ref=e131]: BA (Hons) Economics
+                      - listitem [ref=e132]: IPM / IPMAT
+            - group [ref=e135]:
+              - generic "04 Arts & Humanities Language, society, psychology and media Courses in this stream" [ref=e136] [cursor=pointer]:
+                - generic [ref=e137]:
+                  - generic [ref=e138]: "04"
+                  - generic [ref=e139]:
+                    - heading "Arts & Humanities" [level=3] [ref=e140]
+                    - paragraph [ref=e141]: Language, society, psychology and media
+                    - list "Courses in this stream" [ref=e142]:
+                      - listitem [ref=e143]: BA (Hons) — Psychology, English, Political Science
+                      - listitem [ref=e144]: BJMC — Journalism & Mass Communication
+                      - listitem [ref=e145]: BSW — Social Work
+                      - listitem [ref=e146]: BFA — Fine Arts
+            - group [ref=e149]:
+              - generic "05 Design Product, communication and fashion design Courses in this stream" [ref=e150] [cursor=pointer]:
+                - generic [ref=e151]:
+                  - generic [ref=e152]: "05"
+                  - generic [ref=e153]:
+                    - heading "Design" [level=3] [ref=e154]
+                    - paragraph [ref=e155]: Product, communication and fashion design
+                    - list "Courses in this stream" [ref=e156]:
+                      - listitem [ref=e157]: B.Des
+                      - listitem [ref=e158]: B.Des Interior Design
+                      - listitem [ref=e159]: BFA — Fine Arts
+            - group [ref=e162]:
+              - generic "06 Law Integrated 5-year and 3-year law degrees Courses in this stream" [ref=e163] [cursor=pointer]:
+                - generic [ref=e164]:
+                  - generic [ref=e165]: "06"
+                  - generic [ref=e166]:
+                    - heading "Law" [level=3] [ref=e167]
+                    - paragraph [ref=e168]: Integrated 5-year and 3-year law degrees
+                    - list "Courses in this stream" [ref=e169]:
+                      - listitem [ref=e170]: BA LLB (Hons)
+                      - listitem [ref=e171]: BBA LLB / B.Com LLB
+                      - listitem [ref=e172]: LLB (after graduation)
+            - group [ref=e175]:
+              - generic "07 Hotel Management & Tourism Hospitality, culinary and event management Courses in this stream" [ref=e176] [cursor=pointer]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]: "07"
+                  - generic [ref=e179]:
+                    - heading "Hotel Management & Tourism" [level=3] [ref=e180]
+                    - paragraph [ref=e181]: Hospitality, culinary and event management
+                    - list "Courses in this stream" [ref=e182]:
+                      - listitem [ref=e183]: B.Sc Hospitality & Hotel Administration
+                      - listitem [ref=e184]: B.Sc — Culinary Arts
+                      - listitem [ref=e185]: Event Management (BBA / B.Voc)
+            - group [ref=e188]:
+              - generic "08 Architecture Built environment, planning and conservation Courses in this stream" [ref=e189] [cursor=pointer]:
+                - generic [ref=e190]:
+                  - generic [ref=e191]: "08"
+                  - generic [ref=e192]:
+                    - heading "Architecture" [level=3] [ref=e193]
+                    - paragraph [ref=e194]: Built environment, planning and conservation
+                    - list "Courses in this stream" [ref=e195]:
+                      - listitem [ref=e196]: B.Arch
+                      - listitem [ref=e197]: B.Plan
+      - generic [ref=e201]:
+        - generic [ref=e207]:
+          - paragraph [ref=e208]: AI Career Counsellor
+          - heading "Ask GuidePath anything" [level=3] [ref=e211]
+        - paragraph [ref=e212]: Answers come only from our counselling data — no made-up colleges or fees.
+        - generic [ref=e216]:
+          - textbox "Ask about streams, colleges, exams, fees…" [ref=e217]
+          - button "Send message" [disabled] [ref=e218]
+        - paragraph [ref=e222]: Powered by Gemini — set GEMINI_API_KEY in .env.local to enable
+      - generic [ref=e224]:
+        - generic [ref=e229]:
+          - paragraph [ref=e230]: Stream Comparison
+          - heading "Compare two streams side by side" [level=3] [ref=e232]
+        - generic [ref=e233]:
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - paragraph [ref=e236]: Stream A
+              - button "Swap streams" [ref=e237] [cursor=pointer]
+            - combobox [ref=e240]:
+              - option "Science (PCM)" [selected]
+              - option "Science (PCB)"
+              - option "Commerce"
+              - option "Arts & Humanities"
+              - option "Design"
+              - option "Law"
+              - option "Hotel Management & Tourism"
+              - option "Architecture"
+            - generic [ref=e241]:
+              - paragraph [ref=e242]: Science (PCM)
+              - paragraph [ref=e247]: Engineering, technology and the hard sciences
+              - generic [ref=e248]:
+                - paragraph [ref=e249]: Courses
+                - list [ref=e250]:
+                  - listitem [ref=e251]:
+                    - generic [ref=e252]: B.Tech / B.E.
+                    - generic [ref=e253]: 4 years · JEE Main + JEE Advanced
+                  - listitem [ref=e254]:
+                    - generic [ref=e255]: B.Sc (Hons)
+                    - generic [ref=e256]: 3 years · CUET-UG / merit
+                  - listitem [ref=e257]:
+                    - generic [ref=e258]: Integrated M.Sc (IISER)
+                    - generic [ref=e259]: 5 years · IISER Aptitude Test
+                  - listitem [ref=e260]:
+                    - generic [ref=e261]: B.Math (ISI)
+                    - generic [ref=e262]: 3 years · ISI B.Math Entrance
+              - generic [ref=e263]:
+                - paragraph [ref=e264]: Top Colleges
+                - list [ref=e265]:
+                  - listitem [ref=e266]:
+                    - generic [ref=e267]: IIT Bombay
+                    - generic [ref=e268]: Mumbai · ≈ ₹2.1L / year
+                  - listitem [ref=e269]:
+                    - generic [ref=e270]: IIT Delhi
+                    - generic [ref=e271]: New Delhi · ≈ ₹2.0L / year
+                  - listitem [ref=e272]:
+                    - generic [ref=e273]: NIT Trichy
+                    - generic [ref=e274]: Tiruchirappalli · ≈ ₹1.5L / year
+          - generic [ref=e275]:
+            - generic [ref=e276]:
+              - paragraph [ref=e277]: Stream B
+              - button "Swap streams" [ref=e278] [cursor=pointer]
+            - combobox [ref=e281]:
+              - option "Science (PCM)"
+              - option "Science (PCB)" [selected]
+              - option "Commerce"
+              - option "Arts & Humanities"
+              - option "Design"
+              - option "Law"
+              - option "Hotel Management & Tourism"
+              - option "Architecture"
+            - generic [ref=e282]:
+              - paragraph [ref=e283]: Science (PCB)
+              - paragraph [ref=e288]: Medicine, dentistry and health sciences
+              - generic [ref=e289]:
+                - paragraph [ref=e290]: Courses
+                - list [ref=e291]:
+                  - listitem [ref=e292]:
+                    - generic [ref=e293]: MBBS
+                    - generic [ref=e294]: 5.5 years · NEET-UG
+                  - listitem [ref=e295]:
+                    - generic [ref=e296]: BDS
+                    - generic [ref=e297]: 5 years · NEET-UG
+                  - listitem [ref=e298]:
+                    - generic [ref=e299]: BPT
+                    - generic [ref=e300]: 4.5 years · NEET-UG / university test
+                  - listitem [ref=e301]:
+                    - generic [ref=e302]: B.Sc Nursing
+                    - generic [ref=e303]: 4 years · CUET-UG / state counselling
+                  - listitem [ref=e304]:
+                    - generic [ref=e305]: BAMS / B.V.Sc
+                    - generic [ref=e306]: 5.5 years · NEET-UG
+              - generic [ref=e307]:
+                - paragraph [ref=e308]: Top Colleges
+                - list [ref=e309]:
+                  - listitem [ref=e310]:
+                    - generic [ref=e311]: AIIMS New Delhi
+                    - generic [ref=e312]: New Delhi · ≈ ₹6,700 / year
+                  - listitem [ref=e313]:
+                    - generic [ref=e314]: PGIMER Chandigarh
+                    - generic [ref=e315]: Chandigarh · ≈ ₹2,000 / year
+                  - listitem [ref=e316]:
+                    - generic [ref=e317]: CMC Vellore
+                    - generic [ref=e318]: Vellore · ≈ ₹55,000 / year
+      - generic [ref=e320]:
+        - generic [ref=e325]:
+          - paragraph [ref=e326]: Entrance Exam Timeline
+          - heading "Key exam windows for 2026–27" [level=3] [ref=e329]
+        - paragraph [ref=e330]: Entrance-exam months are indicative and change every year — confirm on the official exam portal before applying.
+        - list [ref=e331]:
+          - listitem [ref=e332]:
+            - paragraph [ref=e335]: January / April
+            - generic [ref=e338]:
+              - heading "JEE Main" [level=4] [ref=e339]
+              - paragraph [ref=e340]: "For: Science (PCM)"
+          - listitem [ref=e345]:
+            - paragraph [ref=e348]: January / March
+            - generic [ref=e351]:
+              - heading "NID-DAT / UCEED / NIFT" [level=4] [ref=e352]
+              - paragraph [ref=e353]: "For: Design"
+          - listitem [ref=e358]:
+            - paragraph [ref=e361]: April / May
+            - generic [ref=e364]:
+              - heading "NCHMCT JEE" [level=4] [ref=e365]
+              - paragraph [ref=e366]: "For: Hotel Management & Tourism"
+          - listitem [ref=e371]:
+            - paragraph [ref=e374]: April / July
+            - generic [ref=e377]:
+              - heading "NATA / JEE Main Paper 2" [level=4] [ref=e378]
+              - paragraph [ref=e379]: "For: Architecture"
+          - listitem [ref=e384]:
+            - paragraph [ref=e387]: May / June
+            - generic [ref=e390]:
+              - heading "JEE Advanced" [level=4] [ref=e391]
+              - paragraph [ref=e392]: "For: Science (PCM)"
+          - listitem [ref=e397]:
+            - paragraph [ref=e400]: May
+            - generic [ref=e403]:
+              - heading "NEET-UG" [level=4] [ref=e404]
+              - paragraph [ref=e405]: "For: Science (PCB)"
+          - listitem [ref=e409]:
+            - paragraph [ref=e412]: May / June
+            - generic [ref=e415]:
+              - heading "CUET-UG" [level=4] [ref=e416]
+              - paragraph [ref=e417]: "For: Science (PCM), Science (PCB), Commerce, Arts & Humanities"
+          - listitem [ref=e421]:
+            - paragraph [ref=e424]: December
+            - generic [ref=e427]:
+              - heading "CLAT" [level=4] [ref=e428]
+              - paragraph [ref=e429]: "For: Law"
+          - listitem [ref=e434]:
+            - paragraph [ref=e437]: December
+            - generic [ref=e440]:
+              - heading "AILET" [level=4] [ref=e441]
+              - paragraph [ref=e442]: "For: Law"
+      - generic [ref=e448]:
+        - generic [ref=e454]:
+          - paragraph [ref=e455]: College Search & Filter
+          - heading "Find colleges by city, exam, or fees" [level=3] [ref=e458]
+        - generic [ref=e459]:
+          - generic [ref=e460]:
+            - generic [ref=e461]: Search name / city / stream
+            - textbox "e.g. IIT Bombay, Delhi, B.Tech" [ref=e462]
+          - generic [ref=e463]:
+            - generic [ref=e464]: City
+            - combobox [ref=e465]:
+              - option "Any city" [selected]
+              - option "Ahmedabad"
+              - option "Bengaluru"
+              - option "Bhopal"
+              - option "Chandigarh"
+              - option "Hyderabad"
+              - option "Kolkata"
+              - option "Manipal"
+              - option "Mumbai"
+              - option "New Delhi"
+              - option "Pune"
+              - option "Tiruchirappalli"
+              - option "Vellore"
+          - generic [ref=e466]:
+            - generic [ref=e467]: State
+            - combobox [ref=e468]:
+              - option "Any state" [selected]
+              - option "Chandigarh"
+              - option "Delhi"
+              - option "Gujarat"
+              - option "Karnataka"
+              - option "Madhya Pradesh"
+              - option "Maharashtra"
+              - option "Tamil Nadu"
+              - option "Telangana"
+              - option "West Bengal"
+          - generic [ref=e469]:
+            - generic [ref=e470]: Entrance exam
+            - combobox [ref=e471]:
+              - option "Any exam" [selected]
+              - option "CLAT"
+              - option "CUET-UG"
+              - option "College merit"
+              - option "IIHM Entrance"
+              - option "JEE Advanced"
+              - option "JEE Main"
+              - option "JEE Main (Paper 2)"
+              - option "MAHE Entrance"
+              - option "NATA / JEE Main"
+              - option "NCHMCT JEE"
+              - option "NEET-UG"
+              - option "NID-DAT"
+              - option "NIFT Entrance"
+              - option "UCEED / SEED"
+        - generic [ref=e472]:
+          - generic [ref=e473]:
+            - generic [ref=e474]: Min fees (₹ Lakhs/year)
+            - spinbutton "0" [ref=e475]
+          - generic [ref=e476]:
+            - generic [ref=e477]: Max fees (₹ Lakhs/year)
+            - spinbutton "50" [ref=e478]
+        - generic [ref=e479]:
+          - paragraph [ref=e480]: 24 colleges found
+          - button "Clear filters" [ref=e481] [cursor=pointer]
+        - generic [ref=e482]:
+          - generic [ref=e484]:
+            - generic [ref=e485]:
+              - link "IIT Bombay" [ref=e486] [cursor=pointer]:
+                - /url: https://www.iitb.ac.in
+              - paragraph [ref=e487]: Mumbai, Maharashtra
+              - paragraph [ref=e491]: Science (PCM)
+              - paragraph [ref=e494]: JEE Advanced · ≈ ₹2.1L / year
+            - link "Form" [ref=e495] [cursor=pointer]:
+              - /url: https://josaa.nic.in
+          - generic [ref=e500]:
+            - generic [ref=e501]:
+              - link "IIT Delhi" [ref=e502] [cursor=pointer]:
+                - /url: https://www.iitd.ac.in
+              - paragraph [ref=e503]: New Delhi, Delhi
+              - paragraph [ref=e507]: Science (PCM)
+              - paragraph [ref=e510]: JEE Advanced · ≈ ₹2.0L / year
+            - link "Form" [ref=e511] [cursor=pointer]:
+              - /url: https://josaa.nic.in
+          - generic [ref=e516]:
+            - generic [ref=e517]:
+              - link "NIT Trichy" [ref=e518] [cursor=pointer]:
+                - /url: https://www.nitt.edu
+              - paragraph [ref=e519]: Tiruchirappalli, Tamil Nadu
+              - paragraph [ref=e523]: Science (PCM)
+              - paragraph [ref=e526]: JEE Main · ≈ ₹1.5L / year
+            - link "Form" [ref=e527] [cursor=pointer]:
+              - /url: https://josaa.nic.in
+          - generic [ref=e532]:
+            - generic [ref=e533]:
+              - link "AIIMS New Delhi" [ref=e534] [cursor=pointer]:
+                - /url: https://www.aiims.edu
+              - paragraph [ref=e535]: New Delhi, Delhi
+              - paragraph [ref=e539]: Science (PCB)
+              - paragraph [ref=e542]: NEET-UG · ≈ ₹6,700 / year
+            - link "Form" [ref=e543] [cursor=pointer]:
+              - /url: https://mcc.nic.in
+          - generic [ref=e548]:
+            - generic [ref=e549]:
+              - link "PGIMER Chandigarh" [ref=e550] [cursor=pointer]:
+                - /url: https://www.pgimer.edu.in
+              - paragraph [ref=e551]: Chandigarh, Chandigarh
+              - paragraph [ref=e555]: Science (PCB)
+              - paragraph [ref=e558]: NEET-UG · ≈ ₹2,000 / year
+            - link "Form" [ref=e559] [cursor=pointer]:
+              - /url: https://mcc.nic.in
+          - generic [ref=e564]:
+            - generic [ref=e565]:
+              - link "CMC Vellore" [ref=e566] [cursor=pointer]:
+                - /url: https://www.cmch-vellore.edu
+              - paragraph [ref=e567]: Vellore, Tamil Nadu
+              - paragraph [ref=e571]: Science (PCB)
+              - paragraph [ref=e574]: NEET-UG · ≈ ₹55,000 / year
+            - link "Form" [ref=e575] [cursor=pointer]:
+              - /url: https://www.cmch-vellore.edu
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - link "SRCC, University of Delhi" [ref=e582] [cursor=pointer]:
+                - /url: https://www.srcc.edu
+              - paragraph [ref=e583]: New Delhi, Delhi
+              - paragraph [ref=e587]: Commerce
+              - paragraph [ref=e590]: CUET-UG · ≈ ₹28,000 / year
+            - link "Form" [ref=e591] [cursor=pointer]:
+              - /url: https://admission.uod.ac.in
+          - generic [ref=e596]:
+            - generic [ref=e597]:
+              - link "Lady Shri Ram College" [ref=e598] [cursor=pointer]:
+                - /url: https://lsr.edu.in
+              - paragraph [ref=e599]: New Delhi, Delhi
+              - paragraph [ref=e603]: Commerce
+              - paragraph [ref=e606]: CUET-UG · ≈ ₹30,000 / year
+            - link "Form" [ref=e607] [cursor=pointer]:
+              - /url: https://admission.uod.ac.in
+          - generic [ref=e612]:
+            - generic [ref=e613]:
+              - link "St. Xavier's College Mumbai" [ref=e614] [cursor=pointer]:
+                - /url: https://www.xaviers.edu
+              - paragraph [ref=e615]: Mumbai, Maharashtra
+              - paragraph [ref=e619]: Commerce
+              - paragraph [ref=e622]: College merit · ≈ ₹60,000 / year
+            - link "Form" [ref=e623] [cursor=pointer]:
+              - /url: https://www.xaviers.edu
+          - generic [ref=e628]:
+            - generic [ref=e629]:
+              - link "St. Stephen's College" [ref=e630] [cursor=pointer]:
+                - /url: https://www.ststephens.edu
+              - paragraph [ref=e631]: New Delhi, Delhi
+              - paragraph [ref=e635]: Arts & Humanities
+              - paragraph [ref=e638]: CUET-UG · ≈ ₹40,000 / year
+            - link "Form" [ref=e639] [cursor=pointer]:
+              - /url: https://admission.uod.ac.in
+          - generic [ref=e644]:
+            - generic [ref=e645]:
+              - link "Miranda House, University of Delhi" [ref=e646] [cursor=pointer]:
+                - /url: https://www.mirandahouse.ac.in
+              - paragraph [ref=e647]: New Delhi, Delhi
+              - paragraph [ref=e651]: Arts & Humanities
+              - paragraph [ref=e654]: CUET-UG · ≈ ₹18,000 / year
+            - link "Form" [ref=e655] [cursor=pointer]:
+              - /url: https://admission.uod.ac.in
+          - generic [ref=e660]:
+            - generic [ref=e661]:
+              - link "Hansraj College, University of Delhi" [ref=e662] [cursor=pointer]:
+                - /url: https://www.hansrajcollege.ac.in
+              - paragraph [ref=e663]: New Delhi, Delhi
+              - paragraph [ref=e667]: Arts & Humanities
+              - paragraph [ref=e670]: CUET-UG · ≈ ₹18,000 / year
+            - link "Form" [ref=e671] [cursor=pointer]:
+              - /url: https://admission.uod.ac.in
+          - generic [ref=e676]:
+            - generic [ref=e677]:
+              - link "National Institute of Design" [ref=e678] [cursor=pointer]:
+                - /url: https://www.nid.edu
+              - paragraph [ref=e679]: Ahmedabad, Gujarat
+              - paragraph [ref=e683]: Design
+              - paragraph [ref=e686]: NID-DAT · ≈ ₹11L / year
+            - link "Form" [ref=e687] [cursor=pointer]:
+              - /url: https://www.nid.edu
+          - generic [ref=e692]:
+            - generic [ref=e693]:
+              - link "National Institute of Fashion Technology" [ref=e694] [cursor=pointer]:
+                - /url: https://www.nift.ac.in
+              - paragraph [ref=e695]: New Delhi, Delhi
+              - paragraph [ref=e699]: Design
+              - paragraph [ref=e702]: NIFT Entrance · ≈ ₹2.7L / year
+            - link "Form" [ref=e703] [cursor=pointer]:
+              - /url: https://www.nift.ac.in
+          - generic [ref=e708]:
+            - generic [ref=e709]:
+              - link "MIT Institute of Design" [ref=e710] [cursor=pointer]:
+                - /url: https://www.mitid.edu.in
+              - paragraph [ref=e711]: Pune, Maharashtra
+              - paragraph [ref=e715]: Design
+              - paragraph [ref=e718]: UCEED / SEED · ≈ ₹9L / year
+            - link "Form" [ref=e719] [cursor=pointer]:
+              - /url: https://www.mitid.edu.in
+          - generic [ref=e724]:
+            - generic [ref=e725]:
+              - link "NLSIU Bangalore" [ref=e726] [cursor=pointer]:
+                - /url: https://www.nls.ac.in
+              - paragraph [ref=e727]: Bengaluru, Karnataka
+              - paragraph [ref=e731]: Law
+              - paragraph [ref=e734]: CLAT · ≈ ₹3.0L / year
+            - link "Form" [ref=e735] [cursor=pointer]:
+              - /url: https://consortiumofnlus.ac.in
+          - generic [ref=e740]:
+            - generic [ref=e741]:
+              - link "NALSAR Hyderabad" [ref=e742] [cursor=pointer]:
+                - /url: https://www.nalsar.ac.in
+              - paragraph [ref=e743]: Hyderabad, Telangana
+              - paragraph [ref=e747]: Law
+              - paragraph [ref=e750]: CLAT · ≈ ₹2.3L / year
+            - link "Form" [ref=e751] [cursor=pointer]:
+              - /url: https://consortiumofnlus.ac.in
+          - generic [ref=e756]:
+            - generic [ref=e757]:
+              - link "WBNUJS Kolkata" [ref=e758] [cursor=pointer]:
+                - /url: https://www.nujs.edu
+              - paragraph [ref=e759]: Kolkata, West Bengal
+              - paragraph [ref=e763]: Law
+              - paragraph [ref=e766]: CLAT · ≈ ₹2.4L / year
+            - link "Form" [ref=e767] [cursor=pointer]:
+              - /url: https://consortiumofnlus.ac.in
+          - generic [ref=e772]:
+            - generic [ref=e773]:
+              - link "IHM Pusa" [ref=e774] [cursor=pointer]:
+                - /url: https://www.ihmpusa.net
+              - paragraph [ref=e775]: New Delhi, Delhi
+              - paragraph [ref=e779]: Hotel Management & Tourism
+              - paragraph [ref=e782]: NCHMCT JEE · ≈ ₹1.6L / year
+            - link "Form" [ref=e783] [cursor=pointer]:
+              - /url: https://www.ihmpusa.net
+          - generic [ref=e788]:
+            - generic [ref=e789]:
+              - link "IIHM Hyderabad" [ref=e790] [cursor=pointer]:
+                - /url: https://www.iihm.ac.in
+              - paragraph [ref=e791]: Hyderabad, Telangana
+              - paragraph [ref=e795]: Hotel Management & Tourism
+              - paragraph [ref=e798]: IIHM Entrance · ≈ ₹2.5L / year
+            - link "Form" [ref=e799] [cursor=pointer]:
+              - /url: https://www.iihm.ac.in
+          - generic [ref=e804]:
+            - generic [ref=e805]:
+              - link "WGSHA, Manipal" [ref=e806] [cursor=pointer]:
+                - /url: https://manipal.edu
+              - paragraph [ref=e807]: Manipal, Karnataka
+              - paragraph [ref=e811]: Hotel Management & Tourism
+              - paragraph [ref=e814]: MAHE Entrance · ≈ ₹4.5L / year
+            - link "Form" [ref=e815] [cursor=pointer]:
+              - /url: https://manipal.edu
+          - generic [ref=e820]:
+            - generic [ref=e821]:
+              - link "School of Planning and Architecture" [ref=e822] [cursor=pointer]:
+                - /url: https://www.spa.ac.in
+              - paragraph [ref=e823]: New Delhi, Delhi
+              - paragraph [ref=e827]: Architecture
+              - paragraph [ref=e830]: JEE Main (Paper 2) · ≈ ₹60,000 / year
+            - link "Form" [ref=e831] [cursor=pointer]:
+              - /url: https://www.nata.in
+          - generic [ref=e836]:
+            - generic [ref=e837]:
+              - link "CEPT University" [ref=e838] [cursor=pointer]:
+                - /url: https://www.cept.ac.in
+              - paragraph [ref=e839]: Ahmedabad, Gujarat
+              - paragraph [ref=e843]: Architecture
+              - paragraph [ref=e846]: NATA / JEE Main · ≈ ₹3.5L / year
+            - link "Form" [ref=e847] [cursor=pointer]:
+              - /url: https://www.nata.in
+          - generic [ref=e852]:
+            - generic [ref=e853]:
+              - link "SPA Bhopal" [ref=e854] [cursor=pointer]:
+                - /url: https://www.spabhopal.ac.in
+              - paragraph [ref=e855]: Bhopal, Madhya Pradesh
+              - paragraph [ref=e859]: Architecture
+              - paragraph [ref=e862]: JEE Main (Paper 2) · ≈ ₹55,000 / year
+            - link "Form" [ref=e863] [cursor=pointer]:
+              - /url: https://www.nata.in
+      - generic [ref=e868]:
+        - generic [ref=e875]:
+          - paragraph [ref=e876]: Stream Recommender
+          - heading "Find the right stream for you" [level=3] [ref=e879]
+        - paragraph [ref=e880]: 1 of 4 — Which subjects do you enjoy most?
+        - generic [ref=e881]:
+          - button "Physics, Chemistry, Maths +3" [ref=e882] [cursor=pointer]:
+            - generic [ref=e883]: Physics, Chemistry, Maths
+            - generic [ref=e884]: "+3"
+          - button "Biology, Chemistry +3" [ref=e885] [cursor=pointer]:
+            - generic [ref=e886]: Biology, Chemistry
+            - generic [ref=e887]: "+3"
+          - button "Accountancy, Business Studies, Economics +3" [ref=e888] [cursor=pointer]:
+            - generic [ref=e889]: Accountancy, Business Studies, Economics
+            - generic [ref=e890]: "+3"
+          - button "History, Political Science, English, Psychology +3" [ref=e891] [cursor=pointer]:
+            - generic [ref=e892]: History, Political Science, English, Psychology
+            - generic [ref=e893]: "+3"
+          - button "Drawing, Design, Creativity +3" [ref=e894] [cursor=pointer]:
+            - generic [ref=e895]: Drawing, Design, Creativity
+            - generic [ref=e896]: "+3"
+          - button "Legal studies, Debate, Logic +3" [ref=e897] [cursor=pointer]:
+            - generic [ref=e898]: Legal studies, Debate, Logic
+            - generic [ref=e899]: "+3"
+          - button "Cooking, Hotel ops, Event planning +3" [ref=e900] [cursor=pointer]:
+            - generic [ref=e901]: Cooking, Hotel ops, Event planning
+            - generic [ref=e902]: "+3"
+          - button "Drawing, Maths, Planning +3" [ref=e903] [cursor=pointer]:
+            - generic [ref=e904]: Drawing, Maths, Planning
+            - generic [ref=e905]: "+3"
+      - generic [ref=e907]:
+        - paragraph [ref=e911]: No saved colleges yet
+        - paragraph [ref=e912]: Click “Save” on any college card to bookmark it here.
+  - contentinfo [ref=e913]:
+    - generic [ref=e914]:
+      - generic [ref=e915]:
+        - generic [ref=e916]:
+          - link "GuidePath home" [ref=e917] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e922]: GuidePath
+          - paragraph [ref=e923]: Every post-12th stream in India, the courses under it, the fees, the entrance exams, and the official admission form for each leading college — in one place. Free for students and parents.
+        - generic [ref=e924]:
+          - paragraph [ref=e925]: Before you apply
+          - paragraph [ref=e929]: Fees, entrance-exam windows and admission dates are indicative for 2026–27 and change every year. Always confirm on the official college portal — every link on this page opens an official site or the recognised counselling authority.
+      - generic [ref=e930]:
+        - generic [ref=e931]: GuidePath — made for Indian students
+        - generic [ref=e932]: Admissions 2026–27
+        - generic [ref=e933]: © 2026 GuidePath Counselling

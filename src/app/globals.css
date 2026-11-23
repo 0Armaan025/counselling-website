@@ -10,6 +10,7 @@ body {
   @apply bg-paper-50 text-ink-900 antialiased;
   background-image: radial-gradient(circle at 1px 1px, rgba(27, 24, 20, 0.05) 1px, transparent 0);
   background-size: 22px 22px;
+  line-height: 1.55;
 }
 
 ::selection {
@@ -24,19 +25,19 @@ body {
 
 @layer components {
   .eyebrow {
-    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300;
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-500;
   }
   .hairline {
-    @apply border-paper-200 dark:border-white/10;
+    @apply border-paper-200;
   }
   .card {
-    @apply border hairline bg-white dark:bg-[#1E1B17];
+    @apply border hairline bg-white rounded-xl p-5 shadow-sm;
   }
-  .btn-primary {
-    @apply inline-flex items-center gap-2 bg-ink-900 px-5 py-3 font-sans text-sm font-semibold tracking-wide text-paper-50 transition-colors hover:bg-clay-600 dark:bg-paper-50 dark:text-ink-900 dark:hover:bg-clay-500 dark:hover:text-paper-50;
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 border hairline bg-ink-900 text-paper-50 px-5 py-3 font-sans text-sm font-semibold tracking-wide rounded-xl transition-colors hover:bg-clay-600 hover:text-paper-50 focus-visible:border-clay-500;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 border hairline px-5 py-3 font-sans text-sm font-semibold text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-600 dark:text-paper-100 dark:hover:border-clay-500 dark:hover:text-clay-500;
+    @apply inline-flex items-center gap-2 border hairline px-5 py-3 font-sans text-sm font-semibold text-ink-700 rounded-xl transition-colors hover:bg-clay-100 hover:text-clay-600 hover:border-clay-500;
   }
   .section {
     @apply border-t hairline;
@@ -44,30 +45,35 @@ body {
   .section-head {
     @apply mb-8 flex items-start gap-4;
   }
-  .section-icon {
-    @apply flex h-9 w-9 shrink-0 items-center justify-center bg-ink-900 text-paper-50 dark:bg-paper-50 dark:text-ink-900;
-  }
   .section-title {
-    @apply mt-1 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl dark:text-paper-50;
+    @apply mt-1 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl;
   }
   .label {
-    @apply font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300;
+    @apply font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500;
   }
   .input {
-    @apply w-full border hairline bg-white px-3 py-2.5 font-sans text-sm text-ink-900 placeholder:text-ink-300 transition-colors focus:border-clay-500 dark:bg-[#1E1B17] dark:text-paper-50 dark:placeholder:text-paper-300;
+    @apply w-full border hairline bg-white px-3 py-2.5 font-sans text-sm text-ink-900 placeholder:text-ink-300 rounded-xl transition-colors focus:border-clay-500 focus:outline-none;
   }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .college-box {
+    @apply mt-4 p-5 rounded-xl border hairline border-slate-200 bg-slate-50 shadow-sm;
+    border-left: 3px solid #3b82f6;
   }
-  .animate-slide-down {
-    animation: slideDown 220ms ease-out forwards;
+  .college-box h3 {
+    @apply font-display text-base font-semibold text-ink-900 mb-2;
+  }
+  .college-box .row {
+    @apply flex items-start gap-2 text-sm;
+  }
+  .college-box .k {
+    @apply font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 w-24 shrink-0;
+  }
+  .college-box .v {
+    @apply text-ink-700 leading-relaxed;
+  }
+  .college-box .v a {
+    @apply text-blue-600 underline underline-offset-4 hover:text-blue-700;
+  }
+  .stream-btn {
+    @apply flex flex-col items-center gap-3 w-full sm:w-64 border hairline rounded-xl p-6 text-center transition-colors;
   }
 }
