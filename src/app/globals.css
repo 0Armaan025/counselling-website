@@ -5,26 +5,16 @@
 :root {
   color-scheme: light;
 }
-.dark {
-  color-scheme: dark;
-}
 
 body {
-  @apply bg-paper-50 text-ink-900 antialiased dark:bg-[#171512] dark:text-paper-100;
+  @apply bg-paper-50 text-ink-900 antialiased;
   background-image: radial-gradient(circle at 1px 1px, rgba(27, 24, 20, 0.05) 1px, transparent 0);
   background-size: 22px 22px;
-}
-.dark body {
-  background-image: radial-gradient(circle at 1px 1px, rgba(250, 248, 243, 0.04) 1px, transparent 0);
 }
 
 ::selection {
   background: #f5e0d3;
   color: #1b1814;
-}
-.dark ::selection {
-  background: #14424a;
-  color: #faf8f3;
 }
 
 :focus-visible {

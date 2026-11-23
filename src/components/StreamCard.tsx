@@ -1,10 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import {
   ChevronDown,
   Clock,
   ClipboardList,
-  ExternalLink,
   GraduationCap,
   Landmark,
   MapPin,
@@ -13,8 +13,10 @@ import {
 import type { Stream } from "@/data/streams";
 import { speak, speakCollege, speakStreamSummary } from "@/lib/speech";
 import BookmarkButton from "./BookmarkButton";
+import CollegeDetailBox from "./CollegeDetailBox";
 
 export default function StreamCard({ stream }: { stream: Stream }) {
+  const [openCollege, setOpenCollege] = useState<string | null>(null);
   return (
     <details
       className="group card"
@@ -93,47 +95,57 @@ export default function StreamCard({ stream }: { stream: Stream }) {
           </p>
           <ol className="mt-3 divide-y hairline border hairline">
             {stream.colleges.map((college, position) => (
-              <li key={college.name} className="flex items-start justify-between gap-3 p-3">
-                <div className="min-w-0">
-                  <a
-                    href={college.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/link inline-flex items-start gap-1.5 font-sans text-sm font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline dark:text-paper-50"
-                  >
-                    {college.name}
-                    <ExternalLink size={12} strokeWidth={1.75} aria-hidden className="mt-0.5 shrink-0 text-ink-300 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 dark:text-paper-300" />
-                  </a>
-                  <p className="mt-1 flex items-center gap-1.5 text-[11px] text-ink-500 dark:text-paper-300">
-                    <MapPin size={11} aria-hidden /> {college.city}, {college.state}
-                  </p>
-                  <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-500 dark:text-paper-300">
-                    {college.exam} · {college.fees}
-                  </p>
+              <li
+                key={college.name}
+                className="flex flex-col gap-2 p-3 rounded-lg border hairline bg-white transition-colors hover:border-clay-200"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex flex-col gap-1">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenCollege(openCollege === college.name ? null : college.name)
+                      }
+                      aria-expanded={openCollege === college.name}
+                      aria-label={openCollege === college.name ? `Hide details for ${college.name}` : `Show details for ${college.name}`}
+                      className="flex items-start gap-1.5 font-sans text-sm font-semibold leading-snug text-ink-900 underline underline-offset-4 hover:text-clay-600 transition-colors"
+                    >
+                      {college.name}
+                    </button>
+                    <p className="mt-1 flex items-center gap-1.5 text-[11px] text-ink-500">
+                      <MapPin size={11} aria-hidden /> {college.city}, {college.state}
+                    </p>
+                    <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-500">
+                      {college.exam} · {college.fees}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-col items-end gap-2">
+                    <span className="font-display text-xs font-semibold text-ink-300">
+                      No. {position + 1}
+                    </span>
+                    <a
+                      href={college.formUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50"
+                    >
+                      <GraduationCap size={12} aria-hidden /> Form
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => speakCollege(college.name, college.city, college.fees)}
+                      aria-label={`Hear about ${college.name}`}
+                      title={`Hear about ${college.name}`}
+                      className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-500 transition-colors hover:text-clay-600"
+                    >
+                      <Volume2 size={11} aria-hidden /> Hear
+                    </button>
+                    <BookmarkButton college={college} stream={stream.name} />
+                  </div>
                 </div>
-                <div className="flex shrink-0 flex-col items-end gap-2">
-                  <span className="font-display text-xs font-semibold text-ink-300 dark:text-paper-300">
-                    No. {position + 1}
-                  </span>
-                  <a
-                    href={college.formUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 dark:border-paper-100 dark:text-paper-100 dark:hover:bg-paper-100 dark:hover:text-ink-900"
-                  >
-                    <GraduationCap size={12} aria-hidden /> Form
-                  </a>
-                  <button
-                    type="button"
-                    onClick={() => speakCollege(college.name, college.city, college.fees)}
-                    aria-label={`Hear about ${college.name}`}
-                    title={`Hear about ${college.name}`}
-                    className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-500 transition-colors hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
-                  >
-                    <Volume2 size={11} aria-hidden /> Hear
-                  </button>
-                  <BookmarkButton college={college} stream={stream.name} />
-                </div>
+                {openCollege === college.name && (
+                  <CollegeDetailBox college={college} />
+                )}
               </li>
             ))}
           </ol>

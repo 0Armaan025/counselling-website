@@ -1,6 +1,5 @@
 import { GraduationCap } from "lucide-react";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
 import VoiceToggle from "./VoiceToggle";
 
 export default function SiteHeader() {
@@ -26,7 +25,6 @@ export default function SiteHeader() {
             Streams
           </a>
           <VoiceToggle />
-          <ThemeToggle />
         </nav>
       </div>
     </header>

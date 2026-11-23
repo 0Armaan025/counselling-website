@@ -104,7 +104,11 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => enterCategory(cat)}
-                className={`flex flex-col items-center gap-3 w-full sm:w-64 bg-white dark:bg-[#1E1B17] border hairline p-6 rounded-xl text-center transition-all hover:shadow-lg hover:shadow-black/10 group`}
+                style={{
+                  backgroundColor: cat.accent + "0f",
+                  borderColor: cat.accent,
+                }}
+                className={`flex flex-col items-center gap-3 w-full sm:w-64 border hairline p-6 rounded-xl text-center transition-all hover:shadow-lg hover:shadow-black/10 group`}
               >
                 <span
                   className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full"
