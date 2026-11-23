@@ -96,7 +96,7 @@ export default function AIChat() {
           </div>
         </div>
 
-        <p className="-mt-4 mb-6 text-sm leading-relaxed text-ink-500 dark:text-paper-300">
+        <p className="-mt-4 mb-6 text-sm leading-relaxed text-ink-700 text-paper-300">
           Answers come only from our counselling data — no made-up colleges or fees.
         </p>
 
@@ -111,8 +111,8 @@ export default function AIChat() {
                 <div
                   className={`p-3 text-sm leading-relaxed ${
                     m.role === "user"
-                      ? "bg-ink-900 text-paper-50 dark:bg-paper-50 dark:text-ink-900"
-                      : "border hairline bg-paper-100 text-ink-900 dark:bg-white/5 dark:text-paper-50"
+                      ? "bg-ink-900 text-paper-50 bg-paper-50 text-ink-900"
+                      : "border hairline bg-paper-100 text-ink-900 bg-white/5 text-paper-50"
                   }`}
                 >
                   {m.text}
@@ -122,7 +122,7 @@ export default function AIChat() {
                     key="speak"
                     onClick={speakLast}
                     aria-label="Hear this answer"
-                    className="mt-1.5 inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-500 transition-colors hover:text-clay-600 dark:text-paper-300 dark:hover:text-clay-500"
+                    className="mt-1.5 inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-700 transition-colors hover:text-clay-800 text-paper-300 hover:text-clay-700"
                   >
                     <Volume2 size={10} aria-hidden /> Hear
                   </button>
@@ -131,19 +131,19 @@ export default function AIChat() {
             ))}
             {loading && (
               <div className="mr-auto max-w-[85%]">
-                <div className="inline-block border hairline bg-paper-100 p-3 font-mono text-xs uppercase tracking-[0.14em] text-ink-500 animate-pulse dark:bg-white/5 dark:text-paper-300">
+                <div className="inline-block border hairline bg-paper-100 p-3 font-mono text-xs uppercase tracking-[0.14em] text-ink-700 animate-pulse bg-white/5 text-paper-300">
                   Counsellor is typing…
                 </div>
               </div>
             )}
             {error && (
               <div className="ml-auto max-w-[85%]">
-                <div className="inline-block border border-clay-600/40 bg-clay-100 p-3 text-sm text-clay-600 dark:bg-clay-600/10 dark:text-clay-500">
+                <div className="inline-block border border-clay-600/40 bg-clay-100 p-3 text-sm text-clay-800 bg-clay-600/10 text-clay-700">
                   {error}
                 </div>
                 <button
                   onClick={() => setError(null)}
-                  className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-clay-600 underline underline-offset-2 hover:text-clay-500 dark:text-clay-500"
+                  className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-clay-800 underline underline-offset-2 hover:text-clay-700 text-clay-700"
                 >
                   Dismiss
                 </button>
@@ -166,7 +166,7 @@ export default function AIChat() {
               <button
                 type="submit"
                 disabled={loading || !input.trim()}
-                className="flex h-10 w-10 shrink-0 items-center justify-center bg-ink-900 text-paper-50 transition-colors hover:bg-clay-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-paper-50 dark:text-ink-900 dark:hover:bg-clay-500 dark:hover:text-paper-50"
+                className="flex h-10 w-10 shrink-0 items-center justify-center bg-ink-900 text-paper-50 transition-colors hover:bg-clay-600 disabled:cursor-not-allowed disabled:opacity-50 bg-paper-50 text-ink-900 hover:bg-clay-500 hover:text-paper-50"
                 aria-label="Send message"
               >
                 <Send size={14} strokeWidth={2} aria-hidden />
@@ -175,7 +175,7 @@ export default function AIChat() {
           </form>
         </div>
 
-        <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300">
+        <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-700 text-paper-300">
           Powered by Gemini — set GEMINI_API_KEY in .env.local to enable
         </p>
       </div>

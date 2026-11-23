@@ -26,10 +26,10 @@ export default function BookmarksList() {
             <span className="section-icon mx-auto" aria-hidden>
               <Bookmark size={16} strokeWidth={2} />
             </span>
-            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 dark:text-paper-300">
+            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 text-paper-300">
               No saved colleges yet
             </p>
-            <p className="mt-2 text-sm text-ink-500 dark:text-paper-300">
+            <p className="mt-2 text-sm text-ink-700 text-paper-300">
               Click &ldquo;Save&rdquo; on any college to bookmark it here.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function BookmarksList() {
           <div>
             <p className="eyebrow">Saved Colleges</p>
             <h3 id="bookmarks-heading" className="section-title">
-              Your <em className="italic text-clay-600 dark:text-clay-500">bookmarked</em> colleges
+              Your <em className="italic text-clay-800 text-clay-700">bookmarked</em> colleges
             </h3>
           </div>
         </div>
@@ -57,18 +57,18 @@ export default function BookmarksList() {
           {bookmarks.map((c) => (
             <li
               key={`${c.name}-${c.stream}`}
-              className="flex flex-wrap items-center justify-between gap-3 p-4 transition-colors hover:bg-paper-100/60 dark:hover:bg-white/5"
+              className="flex flex-wrap items-center justify-between gap-3 p-4 transition-colors hover:bg-paper-100/60 hover:bg-white/5"
             >
               <div className="min-w-0">
                 <a
                   href={c.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline dark:text-paper-50"
+                  className="font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline text-paper-50"
                 >
                   {c.name}
                 </a>
-                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-500 dark:text-paper-300">
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-700 text-paper-300">
                   {c.city}, {c.state} · {c.stream} · {c.exam} · {c.fees}
                 </p>
               </div>
@@ -76,7 +76,7 @@ export default function BookmarksList() {
                 href={c.formUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 dark:border-paper-100 dark:text-paper-100 dark:hover:bg-paper-100 dark:hover:text-ink-900"
+                className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 border-paper-100 text-paper-100 hover:bg-paper-100 hover:text-ink-900"
               >
                 Form
               </a>

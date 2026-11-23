@@ -27,22 +27,22 @@ export default function StreamCourseCard({
   return (
     <div
       onClick={handleClick}
-      className="group card p-5 hover:shadow-lg hover:shadow-black/10 transition-all cursor-pointer"
+      className="group card p-6 hover:shadow-lg hover:shadow-black/10 transition-all cursor-pointer border-t-2 border-t-transparent group-hover:border-clay-600"
     >
       <div className="flex items-start gap-3">
-        <span className="mt-0.5 shrink-0 font-mono text-[11px] uppercase tracking-wider text-clay-600 dark:text-clay-400">
+        <span className="mt-0.5 shrink-0 font-mono text-[11px] uppercase tracking-wider text-ink-700 font-semibold">
           {course.duration}
         </span>
         <div>
-          <h3 className="font-sans text-lg font-semibold text-ink-900 dark:text-paper-50 group-hover:text-clay-600 dark:group-hover:text-clay-400">
+          <h3 className="font-display text-lg font-bold tracking-tight text-ink-900 group-hover:text-clay-700 transition-colors">
             {course.name}
           </h3>
-          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500 dark:text-paper-300 mt-1">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-700 font-semibold mt-1">
             Entrance: {course.exam}
           </p>
         </div>
       </div>
-      <span className="mt-3 block font-mono text-[10px] uppercase tracking-[0.2em] text-clay-600 dark:text-clay-400">
+      <span className="mt-4 block font-mono text-[10px] uppercase tracking-[0.2em] text-clay-700 font-semibold group-hover:text-clay-900 transition-colors">
         Click to explore colleges
       </span>
     </div>

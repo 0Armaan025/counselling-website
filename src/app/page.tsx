@@ -64,7 +64,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Left slide-down menu */}
       <div className="fixed left-4 top-24 z-40">
         <button
           onClick={() => setOpen((o) => !o)}
@@ -122,7 +121,7 @@ export default function Home() {
             );
           })}
         </div>
-        <p className="mt-14 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-300 text-center">
+        <p className="mt-14 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-700 text-center">
           Click any path to hear it and explore its degrees and top colleges
         </p>
       </main>
