@@ -12,7 +12,7 @@ export default function ProgramCollegeCard({
 }: ProgramCollegeCardProps) {
   return (
     <article
-      className="card p-6 rounded-2xl shadow-sm transition-all hover:border-clay-200 hover:shadow-md hover:shadow-black/5"
+      className="card p-6 rounded-2xl shadow-sm transition-all hover:border-blue-200 hover:shadow-md hover:shadow-black/5"
     >
       <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-700 font-semibold">
         {college.city}, {college.state} &bull; {college.exam}
@@ -38,7 +38,7 @@ export default function ProgramCollegeCard({
       >
         Open official website
       </a>
-      <p className="mt-4 text-sm text-ink-900 leading-relaxed">
+      <p className="mt-4 text-sm text-ink-800 leading-relaxed">
         {college.famousFor ?? "Strong academics and graduate outcomes."}
       </p>
     </article>

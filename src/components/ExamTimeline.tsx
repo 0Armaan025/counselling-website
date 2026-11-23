@@ -99,7 +99,7 @@ export default function ExamTimeline() {
           </div>
         </div>
 
-        <p className="-mt-4 mb-8 max-w-xl text-sm leading-relaxed text-ink-700 text-paper-300">
+        <p className="-mt-4 mb-8 max-w-xl text-sm leading-relaxed text-ink-700">
           Entrance-exam months are indicative and change every year — confirm on the official
           exam portal before applying.
         </p>
@@ -112,10 +112,10 @@ export default function ExamTimeline() {
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="label">{entry.month}</p>
-                    <h4 className="mt-1 font-display text-lg font-semibold tracking-tight text-ink-900 text-paper-50">
+                    <h4 className="mt-1 font-display text-lg font-semibold tracking-tight text-ink-900">
                       {entry.exam}
                     </h4>
-                    <p className="mt-1 text-sm text-ink-700 text-paper-300">
+                    <p className="mt-1 text-sm text-ink-700">
                       For: {entry.streams.join(", ")}
                     </p>
                   </div>

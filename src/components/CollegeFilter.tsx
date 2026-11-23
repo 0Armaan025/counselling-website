@@ -165,7 +165,7 @@ export default function CollegeFilter() {
         </div>
 
         <div className="mb-4 flex items-center justify-between border-b-2 border-ink-900 pb-3 border-paper-100">
-          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-700 text-paper-300">
+          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-700">
             {filtered.length} college{s(filtered.length)} found
           </p>
           <button
@@ -174,14 +174,14 @@ export default function CollegeFilter() {
                 query: "", city: "", state: "", exam: "", minFees: "", maxFees: "",
               })
             }
-            className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 underline underline-offset-2 transition-colors hover:text-clay-800 text-paper-300 hover:text-clay-700"
+            className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 underline underline-offset-2 transition-colors hover:text-clay-800 hover:text-clay-700"
           >
             Clear filters
           </button>
         </div>
 
         {filtered.length === 0 ? (
-          <p className="border hairline p-6 text-sm text-ink-700 text-paper-300">
+          <p className="border hairline p-6 text-sm text-ink-700">
             No colleges match your filters. Try broadening the search.
           </p>
         ) : (
@@ -196,12 +196,12 @@ export default function CollegeFilter() {
                     href={c.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline text-paper-50"
+                    className="inline-flex items-center gap-1.5 font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline"
                   >
                     {c.name}
-                    <MapPin size={11} aria-hidden className="shrink-0 text-ink-300 text-paper-300" />
+                    <MapPin size={11} aria-hidden className="shrink-0 text-ink-300" />
                   </a>
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-700 text-paper-300">
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-700">
                     {c.city}, {c.state} · {c.stream} · {c.exam} · {c.fees}
                   </p>
                 </div>
@@ -209,7 +209,7 @@ export default function CollegeFilter() {
                   href={c.formUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 border-paper-100 text-paper-100 hover:bg-paper-100 hover:text-ink-900"
+                  className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 border-paper-100 hover:bg-paper-100 hover:text-ink-900"
                 >
                   <FileText size={12} strokeWidth={1.75} aria-hidden /> Form
                 </a>

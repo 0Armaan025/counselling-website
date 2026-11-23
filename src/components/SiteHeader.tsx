@@ -4,10 +4,10 @@ import VoiceToggle from "./VoiceToggle";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b hairline bg-paper-50/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b hairline/90 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" aria-label="GuidePath home" className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center bg-ink-900 text-paper-50">
+          <span className="flex h-7 w-7 items-center justify-center bg-ink-900">
             <GraduationCap size={15} strokeWidth={2} aria-hidden />
           </span>
           <span className="font-display text-lg font-semibold tracking-tight text-ink-900">

@@ -25,7 +25,7 @@ export default function StreamCard({ stream }: { stream: Stream }) {
         if (target.open) speakStreamSummary(stream.name, stream.courses.map((c) => c.name));
       }}
     >
-      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-6 transition-colors hover:bg-clay-100 sm:p-8 [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-6 transition-colors hover:bg-clay-50 sm:p-8 [&::-webkit-details-marker]:hidden">
         <div className="flex items-start gap-4 sm:gap-6">
           <span className="pt-1 font-mono text-xs font-semibold text-ink-900">
             {stream.index}
@@ -41,7 +41,7 @@ export default function StreamCard({ stream }: { stream: Stream }) {
               {stream.courses.map((course) => (
                 <li
                   key={course.name}
-                  className="border hairline px-2.5 py-1 rounded-lg font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 font-semibold bg-paper-50"
+                  className="border hairline px-2.5 py-1 rounded-lg font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 font-semibold"
                 >
                   {course.name}
                 </li>
@@ -88,7 +88,7 @@ export default function StreamCard({ stream }: { stream: Stream }) {
               onClick={() => stream.colleges.forEach((c, i) => window.setTimeout(() => speak(c.name), i * 1800))}
               aria-label="Read out the top colleges"
               title="Read out the top colleges"
-              className="text-ink-700 font-semibold transition-colors hover:text-clay-900"
+              className="text-ink-700 font-semibold transition-colors hover:text-blue-700"
             >
               <Volume2 size={14} aria-hidden />
             </button>
@@ -97,7 +97,7 @@ export default function StreamCard({ stream }: { stream: Stream }) {
             {stream.colleges.map((college, position) => (
               <li
                 key={college.name}
-                className="flex flex-col gap-2 p-4 rounded-xl border hairline bg-white transition-all hover:border-clay-200 hover:shadow-md hover:shadow-black/5 group"
+                className="flex flex-col gap-2 p-4 rounded-xl border hairline bg-white transition-all hover:border-blue-200 hover:shadow-md hover:shadow-black/5 group"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0 flex flex-col gap-1">
@@ -108,7 +108,7 @@ export default function StreamCard({ stream }: { stream: Stream }) {
                       }
                       aria-expanded={openCollege === college.name}
                       aria-label={openCollege === college.name ? `Hide details for ${college.name}` : `Show details for ${college.name}`}
-                      className="flex items-start gap-1.5 font-display text-base font-bold text-ink-900 underline underline-offset-4 hover:text-clay-900 transition-colors"
+                      className="flex items-start gap-1.5 font-display text-base font-bold text-ink-900 underline underline-offset-4 hover:text-blue-600 transition-colors"
                     >
                       {college.name}
                     </button>
@@ -136,7 +136,7 @@ export default function StreamCard({ stream }: { stream: Stream }) {
                       onClick={() => speakCollege(college.name, college.city, college.fees)}
                       aria-label={`Hear about ${college.name}`}
                       title={`Hear about ${college.name}`}
-                      className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 font-semibold transition-colors hover:text-clay-900"
+                      className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 font-semibold transition-colors hover:text-blue-700"
                     >
                       <Volume2 size={11} aria-hidden /> Hear
                     </button>

@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t hairline bg-paper-100">
+    <footer className="border-t hairline">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <Link href="/" className="flex items-center gap-2" aria-label="GuidePath home">
-              <span className="flex h-6 w-6 items-center justify-center bg-ink-900 text-paper-50">
+              <span className="flex h-6 w-6 items-center justify-center bg-ink-900">
                 <GraduationCap size={13} strokeWidth={2} aria-hidden />
               </span>
               <span className="font-display text-base font-semibold tracking-tight text-ink-900">

@@ -117,10 +117,10 @@ export default function StreamQuiz() {
 
           <div className="card p-6 sm:p-8">
             <p className="label">Your recommended stream</p>
-            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl text-paper-50">
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">
               {stream?.name}
             </h2>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-700 text-paper-300">
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-700">
               {STREAM_DESCRIPTIONS[result]}
             </p>
             <a href="#streams" className="btn-ghost mt-6 !px-4 !py-2.5 !text-xs">
@@ -130,7 +130,7 @@ export default function StreamQuiz() {
 
           <button
             onClick={reset}
-            className="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 underline underline-offset-2 transition-colors hover:text-clay-800 text-paper-300 hover:text-clay-700"
+            className="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 underline underline-offset-2 transition-colors hover:text-clay-800 hover:text-clay-700"
           >
             Retake quiz
           </button>
@@ -157,7 +157,7 @@ export default function StreamQuiz() {
         <p className="-mt-4 mb-2 font-mono text-[11px] uppercase tracking-[0.18em] text-clay-800 text-clay-700">
           Question {String(step + 1).padStart(2, "0")} / {String(QUESTIONS.length).padStart(2, "0")}
         </p>
-        <p className="mb-8 font-display text-xl font-semibold tracking-tight text-ink-900 text-paper-50">
+        <p className="mb-8 font-display text-xl font-semibold tracking-tight text-ink-900">
           {current.text}
         </p>
 
@@ -168,8 +168,8 @@ export default function StreamQuiz() {
               onClick={() => handlePick(opt)}
               className="flex w-full items-center justify-between gap-3 border hairline bg-white p-4 text-left transition-colors hover:border-clay-500 hover:bg-clay-100/50 bg-[#1E1B17] hover:bg-clay-600/10 hover:border-clay-500"
             >
-              <span className="text-sm font-medium text-ink-900 text-paper-50">{opt.label}</span>
-              <span className="shrink-0 font-mono text-[10px] text-ink-700 text-paper-300">+{opt.points}</span>
+              <span className="text-sm font-medium text-ink-900">{opt.label}</span>
+              <span className="shrink-0 font-mono text-[10px] text-ink-700">+{opt.points}</span>
             </button>
           ))}
         </div>

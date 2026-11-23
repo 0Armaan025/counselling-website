@@ -36,7 +36,7 @@ export default function StreamComparison() {
           <button
             onClick={swap}
             disabled={swapping}
-            className="ml-auto hidden h-9 w-9 shrink-0 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 disabled:opacity-50 sm:inline-flex text-paper-100 hover:text-clay-700"
+            className="ml-auto hidden h-9 w-9 shrink-0 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 disabled:opacity-50 sm:inline-flex hover:text-clay-700"
             aria-label="Swap streams"
             title="Swap streams"
           >
@@ -51,13 +51,13 @@ export default function StreamComparison() {
           ].map(({ label, stream, onChange }) => (
             <div key={label} className="flex flex-col gap-3">
               <div className="flex items-center justify-between gap-2">
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-700 text-paper-300">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-700">
                   {label}
                 </p>
                 <button
                   onClick={swap}
                   disabled={swapping}
-                  className="inline-flex h-7 w-7 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 disabled:opacity-50 sm:hidden text-paper-300 hover:text-clay-700"
+                  className="inline-flex h-7 w-7 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 disabled:opacity-50 sm:hidden hover:text-clay-700"
                   aria-label="Swap streams"
                 >
                   <ArrowLeft size={13} strokeWidth={2} aria-hidden />
@@ -80,10 +80,10 @@ export default function StreamComparison() {
               </select>
 
               <div className="card flex-1 overflow-y-auto p-4 sm:p-5">
-                <p className="font-display text-lg font-semibold tracking-tight text-ink-900 text-paper-50">
+                <p className="font-display text-lg font-semibold tracking-tight text-ink-900">
                   {stream.name}
                 </p>
-                <p className="mt-1 text-sm leading-relaxed text-ink-700 text-paper-300">
+                <p className="mt-1 text-sm leading-relaxed text-ink-700">
                   {stream.tagline}
                 </p>
 
@@ -92,8 +92,8 @@ export default function StreamComparison() {
                   <ul className="mt-2 divide-y hairline border-y hairline">
                     {stream.courses.map((c) => (
                       <li key={c.name} className="flex items-baseline justify-between gap-3 py-2 text-sm">
-                        <span className="font-semibold text-ink-900 text-paper-50">{c.name}</span>
-                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-700 text-paper-300">
+                        <span className="font-semibold text-ink-900">{c.name}</span>
+                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-700">
                           {c.duration} · {c.exam}
                         </span>
                       </li>
@@ -106,8 +106,8 @@ export default function StreamComparison() {
                   <ul className="mt-2 divide-y hairline border-y hairline">
                     {stream.colleges.map((c) => (
                       <li key={c.name} className="flex items-baseline justify-between gap-3 py-2 text-sm">
-                        <span className="font-semibold text-ink-900 text-paper-50">{c.name}</span>
-                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-700 text-paper-300">
+                        <span className="font-semibold text-ink-900">{c.name}</span>
+                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-700">
                           {c.city} · {c.fees}
                         </span>
                       </li>

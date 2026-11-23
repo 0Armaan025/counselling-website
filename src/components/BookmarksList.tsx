@@ -26,10 +26,10 @@ export default function BookmarksList() {
             <span className="section-icon mx-auto" aria-hidden>
               <Bookmark size={16} strokeWidth={2} />
             </span>
-            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 text-paper-300">
+            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700">
               No saved colleges yet
             </p>
-            <p className="mt-2 text-sm text-ink-700 text-paper-300">
+            <p className="mt-2 text-sm text-ink-700">
               Click &ldquo;Save&rdquo; on any college to bookmark it here.
             </p>
           </div>
@@ -64,11 +64,11 @@ export default function BookmarksList() {
                   href={c.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline text-paper-50"
+                  className="font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline"
                 >
                   {c.name}
                 </a>
-                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-700 text-paper-300">
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-700">
                   {c.city}, {c.state} · {c.stream} · {c.exam} · {c.fees}
                 </p>
               </div>
@@ -76,7 +76,7 @@ export default function BookmarksList() {
                 href={c.formUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-paper-50 border-paper-100 text-paper-100 hover:bg-paper-100 hover:text-ink-900"
+                className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 border-paper-100 hover:bg-paper-100 hover:text-ink-900"
               >
                 Form
               </a>
