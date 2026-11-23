@@ -83,7 +83,7 @@ export default function Home() {
           <div className="mt-2 card p-3 w-48 shadow-lg shadow-black/10 animate-slide-down">
             <Link
               href="/chatbot"
-              className="flex items-center gap-2 p-2 rounded border hairline hover:bg-clay-100 text-sm font-sans transition-colors"
+              className="flex items-center gap-2 p-2 rounded-2xl border hairline hover:bg-clay-100 text-sm font-sans transition-colors"
             >
               <Bot size={14} strokeWidth={2} aria-hidden />
               AI Counsellor
@@ -92,9 +92,9 @@ export default function Home() {
         )}
       </div>
 
-      <main className="flex-1 flex flex-col items-center justify-center pt-24 pb-16 px-6">
-        <p className="eyebrow mb-8 text-center">Choose your path after Class 12</p>
-        <h1 className="font-display text-4xl font-semibold tracking-tight text-ink-900 mb-12 text-center sm:text-5xl lg:text-6xl">
+      <main className="flex-1 flex flex-col items-center justify-center pt-20 pb-16 px-6">
+        <p className="eyebrow mb-10 text-center">Choose your path after Class 12</p>
+        <h1 className="font-display text-5xl font-semibold tracking-tight text-ink-900 mb-12 text-center sm:text-6xl lg:text-7xl">
           What would you like to pursue?
         </h1>
         <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full max-w-xs sm:max-w-none">
@@ -104,38 +104,25 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => enterCategory(cat)}
-                style={{
-                  backgroundColor: cat.accent + "0a",
-                  borderColor: cat.accent + "40",
-                }}
-                className="stream-btn"
+                className="stream-card group"
+                style={{ borderColor: cat.accent + "40" }}
               >
-                <span
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
-                  style={{
-                    backgroundColor: cat.accent,
-                    color: "#ffffff",
-                  }}
-                >
+                <span className="icon-wrap" style={{ backgroundColor: cat.accent }}>
                   {cat.id === "med" && <span aria-hidden>🏥</span>}
                   {cat.id === "non-med" && <span aria-hidden>⚙️</span>}
                   {cat.id === "commerce" && <span aria-hidden>📊</span>}
                   {cat.id === "humanities" && <span aria-hidden>🎨</span>}
                 </span>
-                <span className="font-display text-lg font-semibold text-ink-900">
-                  {cat.name}
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-500">
-                  {cat.tagline}
-                </span>
-                <span className="mt-2 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 group-hover:text-clay-800">
+                <span className="title">{cat.name}</span>
+                <span className="tagline">{cat.tagline}</span>
+                <span className="cta">
                   Click to explore <ArrowRight size={12} strokeWidth={2} className="inline ml-1 translate-y-0.5" aria-hidden />
                 </span>
               </button>
             );
           })}
         </div>
-        <p className="mt-12 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-400 text-center">
+        <p className="mt-14 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-300 text-center">
           Click any path to hear it and explore its degrees and top colleges
         </p>
       </main>

@@ -1,0 +1,262 @@
+[    5122ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38560
+[   44758ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[   44961ms] [ERROR] ./src/app/globals.css:28:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline { @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   44961ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css
+
+Import trace for requested module:
+./src/app/globals.css @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   45577ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[   45980ms] [ERROR] ./src/app/globals.css:28:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline { @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   45980ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css
+
+Import trace for requested module:
+./src/app/globals.css @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   46139ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[   46146ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[   46150ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[   46170ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[   46351ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29890
+[   46378ms] Error: Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+
+    at getCssError (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/parseCss.js:24:16)
+    at getModuleBuildError (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/webpackModuleError.js:116:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:29:49)
+    at async (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:27:21)
+[   46377ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:46
+[   46379ms] [ERROR] ./src/app/globals.css:28:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   46379ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   57898ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[   58027ms] [ERROR] ./src/app/globals.css:28:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   58027ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css
+
+Import trace for requested module:
+./src/app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   67666ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[   67819ms] [ERROR] ./src/app/globals.css:28:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   67819ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css
+
+Import trace for requested module:
+./src/app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   67838ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[   67986ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29890
+[   67993ms] Error: Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+
+    at getCssError (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/parseCss.js:24:16)
+    at getModuleBuildError (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/webpackModuleError.js:116:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:29:49)
+    at async (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:27:21)
+[   67994ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:46
+[   67994ms] [ERROR] ./src/app/globals.css:28:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive.
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   67995ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   68030ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:1
+[  103134ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[  103295ms] [ERROR] ./src/app/globals.css:40:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `hover:text-clay-800` class does not exist. If `hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive.
+
+  38 |   }
+  39 |   .btn-ghost {
+> 40 |     @apply inline-flex items-center gap-2 border hairline px-6 py-3 font-sans text-sm font-semibold text-ink-700 rounded-2xl transition-all hover:bg-clay-100 hover:text-clay-800 hover:border-clay-500 active:scale-95;
+     |     ^
+  41 |   }
+  42 |   .btn-accent { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[  103295ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `text-ink-400` class does not exist. If `text-ink-400` is a custom class, make sure it is defined within a `@layer` directive. (28:5)
+
+  26 | @layer components {
+  27 |   .eyebrow {
+> 28 |     @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink-400;
+     |     ^
+  29 |   }
+  30 |   .hairline {
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css
+
+Import trace for requested module:
+./src/app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[  103309ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[  103416ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/webpack.js:1
+[  103416ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/main.js:1
+[  103416ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/react-refresh.js:1
+[  103416ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_app.js:1
+[  103416ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_error.js:1
+[  103420ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:1

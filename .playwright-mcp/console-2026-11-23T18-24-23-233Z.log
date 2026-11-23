@@ -1,0 +1,131 @@
+[     375ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38560
+[   31175ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[   31347ms] [ERROR] ./src/app/globals.css:92:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive.
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   31348ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive. (92:5)
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | 
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive. (92:5)
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | 
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css
+
+Import trace for requested module:
+./src/app/globals.css @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   31775ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[   32083ms] [ERROR] ./src/app/globals.css:92:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive.
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   32083ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive. (92:5)
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | 
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive. (92:5)
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | 
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css
+
+Import trace for requested module:
+./src/app/globals.css @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[   32210ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[   32215ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[   32219ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[   32230ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[   32433ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29890
+[   32453ms] Error: Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive.
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | 
+
+    at getCssError (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/parseCss.js:24:16)
+    at getModuleBuildError (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/webpackModuleError.js:116:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:29:49)
+    at async (file:///home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/plugins/wellknown-errors-plugin/index.js:27:21)
+[   32453ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:46
+[   32455ms] [ERROR] ./src/app/globals.css:92:5
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive.
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   32455ms] [ERROR] ./src/app/globals.css
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive. (92:5)
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | 
+-- inner error --
+Syntax error: /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css The `group-hover:text-clay-800` class does not exist. If `group-hover:text-clay-800` is a custom class, make sure it is defined within a `@layer` directive. (92:5)
+
+  90 |   }
+  91 |   .stream-card .cta {
+> 92 |     @apply mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-clay-600 font-semibold group-hover:text-clay-800 transition-colors;
+     |     ^
+  93 |   }
+  94 | 
+Generated code for /home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!/home/armaan025/Desktop/ARMAAN/Coding/projects/counselling/src/app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   54250ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[   54475ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[   54591ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/webpack/254ecc2a4d127579.webpack.hot-update.json:1
+[   54591ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:348
+[   54595ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[   54606ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/webpack.js:1
+[   54606ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/main.js:1
+[   54606ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/react-refresh.js:1
+[   54610ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_app.js:1
+[   54610ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/fallback/pages/_error.js:1
+[   54616ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:1
