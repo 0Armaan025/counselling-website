@@ -39,3 +39,6 @@ next-env.d.ts
 
 # Playwright CLI logs
 .playwright-cli/
+
+# Playwright MCP capture artifacts
+.playwright-mcp/
