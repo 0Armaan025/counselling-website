@@ -26,7 +26,7 @@ export default function ThemeToggle() {
       aria-pressed={dark ?? false}
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
-      className="inline-flex h-9 w-9 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 hover:text-clay-700"
+      className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 text-slate-700 transition-all hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 active:scale-95 cursor-pointer"
     >
       {dark === null ? (
         <span className="h-[17px] w-[17px]" aria-hidden />

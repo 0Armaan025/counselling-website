@@ -64,7 +64,7 @@ export default function CollegeFilter() {
           <div>
             <p className="eyebrow">College Search &amp; Filter</p>
             <h3 id="college-filter-heading" className="section-title">
-              Find colleges by <em className="italic text-clay-800 text-clay-700">city, exam, or fees</em>
+              Find colleges by <em className="italic text-indigo-700 font-medium">city, exam, or fees</em>
             </h3>
           </div>
         </div>
@@ -164,8 +164,8 @@ export default function CollegeFilter() {
           </div>
         </div>
 
-        <div className="mb-4 flex items-center justify-between border-b-2 border-ink-900 pb-3 border-paper-100">
-          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-700">
+        <div className="mb-4 flex items-center justify-between border-b-2 border-slate-900 pb-3 border-slate-200">
+          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-900">
             {filtered.length} college{s(filtered.length)} found
           </p>
           <button
@@ -174,34 +174,34 @@ export default function CollegeFilter() {
                 query: "", city: "", state: "", exam: "", minFees: "", maxFees: "",
               })
             }
-            className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 underline underline-offset-2 transition-colors hover:text-clay-800 hover:text-clay-700"
+            className="font-mono text-[10px] uppercase tracking-[0.14em] text-slate-700 underline underline-offset-2 transition-colors hover:text-indigo-700"
           >
             Clear filters
           </button>
         </div>
 
         {filtered.length === 0 ? (
-          <p className="border hairline p-6 text-sm text-ink-700">
+          <p className="border border-slate-200 p-6 rounded-xl text-sm text-slate-900 bg-slate-50">
             No colleges match your filters. Try broadening the search.
           </p>
         ) : (
-          <ul className="divide-y hairline border-y hairline">
+          <ul className="divide-y border-slate-100 space-y-0">
             {filtered.map((c) => (
               <li
                 key={`${c.name}-${c.stream}`}
-                className="flex flex-wrap items-center justify-between gap-3 p-4 transition-colors hover:bg-paper-100/60 hover:bg-white/5"
+                className="flex flex-wrap items-center justify-between gap-3 p-4 transition-colors hover:bg-slate-50 hover:border-indigo-200 border border-slate-200 rounded-xl"
               >
                 <div className="min-w-0">
                   <a
                     href={c.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-display text-base font-semibold leading-snug text-ink-900 underline-offset-4 hover:underline"
+                    className="inline-flex items-center gap-1.5 font-display text-base font-semibold leading-snug text-slate-900 underline-offset-4 hover:text-indigo-600 hover:underline"
                   >
                     {c.name}
-                    <MapPin size={11} aria-hidden className="shrink-0 text-ink-300" />
+                    <MapPin size={11} aria-hidden className="shrink-0 text-slate-500" />
                   </a>
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-700">
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-slate-700 font-semibold">
                     {c.city}, {c.state} · {c.stream} · {c.exam} · {c.fees}
                   </p>
                 </div>
@@ -209,7 +209,7 @@ export default function CollegeFilter() {
                   href={c.formUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex shrink-0 items-center gap-1.5 border border-ink-900 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-ink-900 transition-colors hover:bg-ink-900 border-paper-100 hover:bg-paper-100 hover:text-ink-900"
+                  className="inline-flex shrink-0 items-center gap-1.5 border border-indigo-600 px-2.5 py-1.5 font-sans text-[11px] font-semibold text-indigo-700 transition-colors hover:bg-indigo-600 hover:text-white"
                 >
                   <FileText size={12} strokeWidth={1.75} aria-hidden /> Form
                 </a>

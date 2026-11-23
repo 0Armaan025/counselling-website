@@ -25,7 +25,7 @@ export default function VoiceToggle() {
       aria-pressed={!muted}
       aria-label={muted ? "Turn voice guidance on" : "Turn voice guidance off"}
       title={muted ? "Voice guidance is off" : "Voice guidance is on"}
-      className="inline-flex h-9 w-9 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 hover:text-clay-700"
+      className="inline-flex h-9 w-9 items-center justify-center border border-slate-200 text-slate-700 transition-all hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 active:scale-95 cursor-pointer"
     >
       {muted ? <VolumeX size={17} strokeWidth={1.75} aria-hidden /> : <Volume2 size={17} strokeWidth={1.75} aria-hidden />}
     </button>

@@ -30,13 +30,13 @@ export default function StreamComparison() {
           <div>
             <p className="eyebrow">Stream Comparison</p>
             <h3 id="comparison-heading" className="section-title">
-              Compare two streams <em className="italic text-clay-800 text-clay-700">side by side</em>
+              Compare two streams <em className="italic text-indigo-700 font-medium">side by side</em>
             </h3>
           </div>
           <button
             onClick={swap}
             disabled={swapping}
-            className="ml-auto hidden h-9 w-9 shrink-0 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 disabled:opacity-50 sm:inline-flex hover:text-clay-700"
+            className="ml-auto hidden h-9 w-9 shrink-0 items-center justify-center border border-slate-200 text-slate-700 transition-all hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 disabled:opacity-50 sm:inline-flex active:scale-95 cursor-pointer"
             aria-label="Swap streams"
             title="Swap streams"
           >
@@ -51,13 +51,13 @@ export default function StreamComparison() {
           ].map(({ label, stream, onChange }) => (
             <div key={label} className="flex flex-col gap-3">
               <div className="flex items-center justify-between gap-2">
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-700">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-700 font-semibold">
                   {label}
                 </p>
                 <button
                   onClick={swap}
                   disabled={swapping}
-                  className="inline-flex h-7 w-7 items-center justify-center border hairline text-ink-700 transition-colors hover:border-clay-500 hover:text-clay-800 disabled:opacity-50 sm:hidden hover:text-clay-700"
+                  className="inline-flex h-7 w-7 items-center justify-center border border-slate-200 text-slate-700 transition-all hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 disabled:opacity-50 sm:hidden active:scale-95 cursor-pointer"
                   aria-label="Swap streams"
                 >
                   <ArrowLeft size={13} strokeWidth={2} aria-hidden />
@@ -80,20 +80,20 @@ export default function StreamComparison() {
               </select>
 
               <div className="card flex-1 overflow-y-auto p-4 sm:p-5">
-                <p className="font-display text-lg font-semibold tracking-tight text-ink-900">
+                <p className="font-display text-lg font-semibold tracking-tight text-slate-900">
                   {stream.name}
                 </p>
-                <p className="mt-1 text-sm leading-relaxed text-ink-700">
+                <p className="mt-1 text-sm leading-relaxed text-slate-900">
                   {stream.tagline}
                 </p>
 
                 <div className="mt-5">
                   <p className="label">Courses</p>
-                  <ul className="mt-2 divide-y hairline border-y hairline">
+                  <ul className="mt-2 divide-y border-slate-100 space-y-0">
                     {stream.courses.map((c) => (
                       <li key={c.name} className="flex items-baseline justify-between gap-3 py-2 text-sm">
-                        <span className="font-semibold text-ink-900">{c.name}</span>
-                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-700">
+                        <span className="font-semibold text-slate-900">{c.name}</span>
+                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-slate-700 font-semibold">
                           {c.duration} · {c.exam}
                         </span>
                       </li>
@@ -103,11 +103,11 @@ export default function StreamComparison() {
 
                 <div className="mt-5">
                   <p className="label">Top Colleges</p>
-                  <ul className="mt-2 divide-y hairline border-y hairline">
+                  <ul className="mt-2 divide-y border-slate-100 space-y-0">
                     {stream.colleges.map((c) => (
                       <li key={c.name} className="flex items-baseline justify-between gap-3 py-2 text-sm">
-                        <span className="font-semibold text-ink-900">{c.name}</span>
-                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-700">
+                        <span className="font-semibold text-slate-900">{c.name}</span>
+                        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.08em] text-slate-700 font-semibold">
                           {c.city} · {c.fees}
                         </span>
                       </li>

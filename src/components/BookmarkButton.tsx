@@ -38,7 +38,7 @@ export default function BookmarkButton({
       onClick={handleClick}
       aria-pressed={bookmarked}
       aria-label={bookmarked ? "Remove bookmark" : "Bookmark college"}
-      className={`inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-700 font-semibold transition-colors hover:text-blue-700 ${bookmarked ? "text-blue-700" : ""}`}
+      className={`inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em] text-slate-700 font-semibold transition-colors hover:text-indigo-700 ${bookmarked ? "text-indigo-700" : ""}`}
     >
       {bookmarked ? (
         <BookmarkCheck size={11} strokeWidth={2} aria-hidden fill="currentColor" />

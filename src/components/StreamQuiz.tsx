@@ -117,10 +117,10 @@ export default function StreamQuiz() {
 
           <div className="card p-6 sm:p-8">
             <p className="label">Your recommended stream</p>
-            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
               {stream?.name}
             </h2>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-700">
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-900">
               {STREAM_DESCRIPTIONS[result]}
             </p>
             <a href="#streams" className="btn-ghost mt-6 !px-4 !py-2.5 !text-xs">
@@ -130,7 +130,7 @@ export default function StreamQuiz() {
 
           <button
             onClick={reset}
-            className="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 underline underline-offset-2 transition-colors hover:text-clay-800 hover:text-clay-700"
+            className="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] text-slate-700 font-semibold underline underline-offset-2 transition-colors hover:text-indigo-700"
           >
             Retake quiz
           </button>
@@ -154,10 +154,10 @@ export default function StreamQuiz() {
           </div>
         </div>
 
-        <p className="-mt-4 mb-2 font-mono text-[11px] uppercase tracking-[0.18em] text-clay-800 text-clay-700">
+        <p className="-mt-4 mb-2 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-700 font-semibold">
           Question {String(step + 1).padStart(2, "0")} / {String(QUESTIONS.length).padStart(2, "0")}
         </p>
-        <p className="mb-8 font-display text-xl font-semibold tracking-tight text-ink-900">
+        <p className="mb-8 font-display text-xl font-semibold tracking-tight text-slate-900">
           {current.text}
         </p>
 
@@ -166,10 +166,10 @@ export default function StreamQuiz() {
             <button
               key={opt.streamId}
               onClick={() => handlePick(opt)}
-              className="flex w-full items-center justify-between gap-3 border hairline bg-white p-4 text-left transition-colors hover:border-clay-500 hover:bg-clay-100/50 bg-[#1E1B17] hover:bg-clay-600/10 hover:border-clay-500"
+              className="flex w-full items-center justify-between gap-3 border border-slate-200 bg-white p-4 text-left transition-all hover:border-indigo-200 hover:shadow-md hover:shadow-slate-200/50 cursor-pointer"
             >
-              <span className="text-sm font-medium text-ink-900">{opt.label}</span>
-              <span className="shrink-0 font-mono text-[10px] text-ink-700">+{opt.points}</span>
+              <span className="text-sm font-semibold text-slate-900">{opt.label}</span>
+              <span className="shrink-0 font-mono text-[10px] text-slate-700 font-semibold">+{opt.points}</span>
             </button>
           ))}
         </div>

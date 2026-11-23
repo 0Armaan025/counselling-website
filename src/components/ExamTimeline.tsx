@@ -94,32 +94,32 @@ export default function ExamTimeline() {
           <div>
             <p className="eyebrow">Entrance Exam Timeline</p>
             <h3 id="timeline-heading" className="section-title">
-              Key exam windows for <em className="italic text-clay-800 text-clay-700">2026–27</em>
+              Key exam windows for <em className="italic text-indigo-700 font-medium">2026–27</em>
             </h3>
           </div>
         </div>
 
-        <p className="-mt-4 mb-8 max-w-xl text-sm leading-relaxed text-ink-700">
+        <p className="-mt-4 mb-8 max-w-xl text-sm leading-relaxed text-slate-900">
           Entrance-exam months are indicative and change every year — confirm on the official
           exam portal before applying.
         </p>
 
-        <ol className="relative space-y-6 border-l hairline pl-8">
+        <ol className="relative space-y-6 border-l border-slate-200 pl-8">
           {sorted.map((entry) => (
             <li key={entry.exam} className="relative">
-              <span className="absolute -left-[37px] top-[22px] h-2.5 w-2.5 shrink-0 bg-clay-600 bg-clay-500" aria-hidden />
+              <span className="absolute -left-[37px] top-[22px] h-2.5 w-2.5 shrink-0 bg-indigo-600" aria-hidden />
               <div className="card p-4 sm:p-5">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="label">{entry.month}</p>
-                    <h4 className="mt-1 font-display text-lg font-semibold tracking-tight text-ink-900">
+                    <h4 className="mt-1 font-display text-lg font-semibold tracking-tight text-slate-900">
                       {entry.exam}
                     </h4>
-                    <p className="mt-1 text-sm text-ink-700">
+                    <p className="mt-1 text-sm text-slate-900">
                       For: {entry.streams.join(", ")}
                     </p>
                   </div>
-                  <span className="flex shrink-0 items-center text-clay-800 text-clay-700" aria-hidden>
+                  <span className="flex shrink-0 items-center text-indigo-700 font-medium" aria-hidden>
                     <entry.icon size={15} strokeWidth={1.75} />
                   </span>
                 </div>

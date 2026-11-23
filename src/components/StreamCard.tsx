@@ -25,23 +25,23 @@ export default function StreamCard({ stream }: { stream: Stream }) {
         if (target.open) speakStreamSummary(stream.name, stream.courses.map((c) => c.name));
       }}
     >
-      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-6 transition-colors hover:bg-clay-50 sm:p-8 [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-6 transition-colors hover:bg-indigo-50 sm:p-8 [&::-webkit-details-marker]:hidden">
         <div className="flex items-start gap-4 sm:gap-6">
-          <span className="pt-1 font-mono text-xs font-semibold text-ink-900">
+          <span className="pt-1 font-mono text-xs font-semibold text-slate-900">
             {stream.index}
           </span>
           <div>
-            <h3 className="font-display text-xl font-semibold leading-snug tracking-tight text-ink-900 sm:text-2xl">
+            <h3 className="font-display text-xl font-semibold leading-snug tracking-tight text-slate-900 sm:text-2xl">
               {stream.name}
             </h3>
-            <p className="mt-1 max-w-md text-sm leading-relaxed text-ink-700">
+            <p className="mt-1 max-w-md text-sm leading-relaxed text-slate-700">
               {stream.tagline}
             </p>
             <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Courses in this stream">
               {stream.courses.map((course) => (
                 <li
                   key={course.name}
-                  className="border hairline px-2.5 py-1 rounded-lg font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 font-semibold"
+                  className="border border-slate-200 px-2.5 py-1 rounded-lg font-mono text-[10px] uppercase tracking-[0.14em] text-slate-700 font-semibold bg-slate-50"
                 >
                   {course.name}
                 </li>
@@ -53,21 +53,22 @@ export default function StreamCard({ stream }: { stream: Stream }) {
           size={18}
           strokeWidth={1.75}
           aria-hidden
-          className="mt-1 shrink-0 text-ink-700 transition-transform duration-200 group-open:rotate-180"
+          className="mt-1 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180"
         />
       </summary>
 
-      <div className="grid gap-6 border-t hairline p-6 sm:grid-cols-[1.05fr_1fr] sm:p-8">
+      <div className="grid gap-8 border-t border-slate-200 p-6 sm:grid-cols-[1.05fr_1fr] sm:p-8">
         <section aria-label={`Courses in ${stream.name}`}>
-          <p className="eyebrow flex items-center gap-2">
-            <ClipboardList size={12} aria-hidden /> Paths in this stream
-          </p>
-          <ul className="mt-4 divide-y hairline border hairline space-y-0">
+          <div className="flex items-center gap-2 mb-6">
+            <ClipboardList size={12} aria-hidden className="text-indigo-600" />
+            <p className="eyebrow">Paths in this stream</p>
+          </div>
+          <ul className="divide-y border-slate-100 space-y-0">
             {stream.courses.map((course) => (
-              <li key={course.name} className="flex flex-wrap items-center justify-between gap-2 bg-white p-3 rounded-lg border hairline border-paper-100">
+              <li key={course.name} className="flex flex-wrap items-center justify-between gap-2 bg-white p-3 rounded-xl border border-slate-100">
                 <div>
-                  <p className="text-sm font-bold text-ink-900">{course.name}</p>
-                  <p className="mt-0.5 flex items-center gap-1.5 text-[11px] text-ink-700 font-semibold">
+                  <p className="text-sm font-semibold text-slate-900">{course.name}</p>
+                  <p className="mt-0.5 flex items-center gap-1.5 text-[11px] text-slate-600 font-semibold">
                     <Clock size={11} aria-hidden /> {course.duration}
                     <span aria-hidden>·</span>
                     {course.exam}
@@ -79,25 +80,26 @@ export default function StreamCard({ stream }: { stream: Stream }) {
         </section>
 
         <section aria-label={`Top colleges for ${stream.name}`}>
-          <p className="eyebrow flex items-center justify-between gap-2">
-            <span className="flex items-center gap-2">
-              <Landmark size={12} aria-hidden /> Best colleges in India
-            </span>
+          <div className="flex items-center justify-between gap-2 mb-6">
+            <div className="flex items-center gap-2">
+              <Landmark size={12} aria-hidden className="text-indigo-600" />
+              <p className="eyebrow">Best colleges in India</p>
+            </div>
             <button
               type="button"
               onClick={() => stream.colleges.forEach((c, i) => window.setTimeout(() => speak(c.name), i * 1800))}
               aria-label="Read out the top colleges"
               title="Read out the top colleges"
-              className="text-ink-700 font-semibold transition-colors hover:text-blue-700"
+              className="text-slate-600 font-semibold transition-colors hover:text-indigo-700"
             >
               <Volume2 size={14} aria-hidden />
             </button>
-          </p>
-          <ol className="mt-4 divide-y hairline border hairline space-y-0">
+          </div>
+          <ol className="divide-y border-slate-100 space-y-0">
             {stream.colleges.map((college, position) => (
               <li
                 key={college.name}
-                className="flex flex-col gap-2 p-4 rounded-xl border hairline bg-white transition-all hover:border-blue-200 hover:shadow-md hover:shadow-black/5 group"
+                className="flex flex-col gap-2 p-4 rounded-xl border border-white bg-white transition-all hover:border-indigo-200 hover:shadow-md hover:shadow-slate-200/50 group"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0 flex flex-col gap-1">
@@ -108,19 +110,19 @@ export default function StreamCard({ stream }: { stream: Stream }) {
                       }
                       aria-expanded={openCollege === college.name}
                       aria-label={openCollege === college.name ? `Hide details for ${college.name}` : `Show details for ${college.name}`}
-                      className="flex items-start gap-1.5 font-display text-base font-bold text-ink-900 underline underline-offset-4 hover:text-blue-600 transition-colors"
+                      className="flex items-start gap-1.5 font-display text-base font-bold text-slate-900 underline underline-offset-4 hover:text-indigo-600 transition-colors"
                     >
                       {college.name}
                     </button>
-                    <p className="mt-1 flex items-center gap-1.5 text-[11px] text-ink-700 font-semibold">
+                    <p className="mt-1 flex items-center gap-1.5 text-[11px] text-slate-600 font-semibold">
                       <MapPin size={11} aria-hidden /> {college.city}, {college.state}
                     </p>
-                    <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-700 font-semibold">
+                    <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.1em] text-slate-600 font-semibold">
                       {college.exam} · {college.fees}
                     </p>
                   </div>
                   <div className="flex shrink-0 flex-col items-end gap-2">
-                    <span className="font-display text-xs font-semibold text-ink-900">
+                    <span className="font-display text-xs font-bold text-slate-900">
                       No. {position + 1}
                     </span>
                     <a
@@ -136,7 +138,7 @@ export default function StreamCard({ stream }: { stream: Stream }) {
                       onClick={() => speakCollege(college.name, college.city, college.fees)}
                       aria-label={`Hear about ${college.name}`}
                       title={`Hear about ${college.name}`}
-                      className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-700 font-semibold transition-colors hover:text-blue-700"
+                      className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-[0.14em] text-slate-600 font-semibold transition-colors hover:text-indigo-700"
                     >
                       <Volume2 size={11} aria-hidden /> Hear
                     </button>
